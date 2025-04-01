@@ -11,7 +11,7 @@ const Top2 = () => {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row max-w-screen-xl justify-between mt-4 border-2 rounded-md border-custom-green w-full sm:w-[700px] h-[55px] items-center p-2">
+    <div className="flex flex-col sm:flex-row max-w-screen-xl justify-between mt-6 border-2 rounded-md border-custom-green w-full sm:w-[700px] h-[55px] items-center p-2">
     <div className="flex space-x-4 overflow-x-auto sm:flex-wrap">
       {categories.map((category, index) => (
         <div key={index} className="px-4 py-2 bg-custom-white text-custom-blue rounded-full cursor-pointer font-semibold relative">

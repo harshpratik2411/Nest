@@ -8,7 +8,7 @@ const Navbar = () => {
         color: '#7E7E7E',
         borderBottom: '1px solid #7E7E7E',
       }}
-      className="font-lato p-2 flex  justify-between items-center"
+      className="font-lato  p-2 flex  justify-between items-center"
     >
       {/* Left Section */}
       <div className="flex space-x-3 mx-[120px] my-[6.5px] text-[13px]">

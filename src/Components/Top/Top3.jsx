@@ -1,36 +1,32 @@
 import React from 'react'
-import {  FaRegHeart, FaShoppingCart, FaUser } from 'react-icons/fa' 
-import { FaLocationDot } from 'react-icons/fa6'
 import compare from '../../assets/icons/compare.svg'
+import cart from '../../assets/icons/cart.svg'
+import location from '../../assets/icons/location.svg'
+import account from '../../assets/icons/account.svg'
+import wishlist from '../../assets/icons/wishlist.svg'
 import { IoMdArrowDropdown } from "react-icons/io";
 
 const Top3 = () => {
   return (
     <div className="flex justify-between items-center mt-2 p-4  gap-4">
-    {/* Location Button */}
-    <button className="flex items-center   bg-white  text-custom-green/70  border-2   px-1 ml-2 py-3 rounded-lg">
-       <FaLocationDot className=' text-custom-gray'/>
-        <span className=''> Your Location </span>
-      </button> 
-  
     {/* Anchor Links with Icons */}
-    <div className="flex space-x-4 gap-4">
-      <a href="#" className="flex items-center space-x-3 text-custom-new-gray">
+    <div className="flex space-x-6 w-[20px]  h-[20px] gap-4">
+      <a href="#" className="flex items-center space-x-1 text-custom-new-gray">
       
         <img src={compare} alt="Nest Logo"  />
-        <span>Compare</span>
+        <span className='mt-3'>Compare</span>
       </a>
-      <a href="#" className="flex items-center space-x-2 text-custom-new-gray">
-        <FaRegHeart />
-        <span>Wishlist</span>
+      <a href="#" className="flex items-center space-x-1 text-custom-new-gray">
+      <img src={wishlist} alt="Nest Logo"  />
+        <span className='mt-3'>Wishlist</span>
       </a>
-      <a href="#" className="flex items-center space-x-2 text-custom-new-gray">
-        <FaShoppingCart />
-        <span>Cart</span>
+      <a href="#" className="flex items-center space-x-1 text-custom-new-gray">
+      <img src={cart} alt="Nest Logo"  />
+        <span className='mt-3'>Cart</span>
       </a>
-      <a href="#" className="flex items-center space-x-2 text-custom-new-gray">
-        <FaUser />
-        <span>Account</span>
+      <a href="#" className="flex items-center space-x-1 text-custom-new-gray">
+      <img src={account} alt="Nest Logo"  />
+        <span className='mt-3'>Account</span>
       </a>
     </div>
   </div>

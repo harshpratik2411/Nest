@@ -16,6 +16,7 @@ export default {
         'custom-gray': '#B6B6B6',
         'custom-new-gray':"#7E7E7E",
         'custom-new-white':"#ECECEC",
+        'custom-light-green':"#BCE3C9",
       
         
       },

@@ -6,9 +6,9 @@ const Navbar = () => {
       style={{
         backgroundColor: '#FFFFFF',
         color: '#7E7E7E',
-        borderBottom: '1px solid #7E7E7E',
+        borderBottom: '1px  #7E7E7E',
       }}
-      className="font-lato  p-2 flex  justify-between items-center"
+      className="font-lato  p-2 flex -ml-[48px]  justify-between items-center"
     >
       {/* Left Section */}
       <div className="flex space-x-3 mx-[120px] my-[6.5px] text-[13px]">
@@ -36,7 +36,7 @@ const Navbar = () => {
       </div>
 
       {/* Right Section */}  
-      <div className='mr-32 flex'>
+      <div className='mr-24 flex'>
 
       <div className="flex items-center  space-x-4">
         <a href="/help" className="hover:text-gray-400  text-[14px]">

@@ -8,6 +8,8 @@ export default {
     extend: {
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
+        quicksand: ['quicksand', 'sans-serif'],
+
       },
       colors: {
         'custom-green': '#3BB77E',
@@ -17,6 +19,7 @@ export default {
         'custom-new-gray':"#7E7E7E",
         'custom-new-white':"#ECECEC",
         'custom-light-green':"#BCE3C9",
+        'custom-mustard':"#F5F5DC",
       
         
       },

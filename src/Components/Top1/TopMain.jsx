@@ -8,7 +8,7 @@ const TopMain = () => {
     <div className='flex space-x-10 align-middle opacity-100'>  
     <Top1/>
     <Top2/>
-     <Top3/>
+    <Top3/>
 
     </div>
   )

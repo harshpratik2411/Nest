@@ -8,13 +8,13 @@ import { IoMdArrowDropdown } from "react-icons/io";
 
 const Top3 = () => {
   return (
-    <div className="flex justify-between items-center mt-2 p-4  gap-4">
+    <div className="flex justify-between items-center mt-5 p-4  gap-4">
     {/* Anchor Links with Icons */}
     <div className="flex space-x-12 w-[20px]  h-[20px] gap-4">
       <a href="#" className="flex items-center space-x-1 text-custom-new-gray">
       
         <img src={compare} alt="Nest Logo"  />
-        <span className='mt-3'>Compare</span>
+        <span className='mt-2'>Compare</span>
       </a>
       <a href="#" className="flex items-center space-x-1 text-custom-new-gray">
       <img src={wishlist} alt="Nest Logo"  />

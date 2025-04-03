@@ -3,7 +3,7 @@ import Banner from "../../assets/icons/Banner.png";
 
 const Hero2 = () => {
   return (
-    <section className="relative w-[1200px] h-[530px] rounded-md py-16 px-8 flex justify-center items-center">
+    <section className="relative w-[1240px] h-[540px] rounded-md py-16 px-8 flex justify-center items-center">
       <img src={Banner} alt="" className="absolute inset-0 w-full h-full object-cover" />
       <div className="relative max-w-4xl text-center text-white">
         <h1 className="text-5xl font-quicksand -ml-[390px] font-bold w-[650px] h-[130px] text-custom-blue py-4 mx-auto text-left">

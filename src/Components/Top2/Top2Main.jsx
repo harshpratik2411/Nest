@@ -5,7 +5,7 @@ import Top3 from './Top3'
 
 const Top2Main = () => {
   return (
-    <div className='flex space-x-6 bg-custom-white'>
+    <div className='flex space-x-6 border-2 align-middle  items-center mt-4 bg-custom-white h-[60px]'>
     <Top1/>
      <Top2/>
     <Top3/>

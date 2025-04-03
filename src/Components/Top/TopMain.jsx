@@ -5,7 +5,7 @@ import Top3 from './Top3'
 
 const TopMain = () => {
   return (
-    <div className='flex space-x-10 '>  
+    <div className='flex space-x-10 align-middle opacity-100'>  
     <Top1/>
     <Top2/>
      <Top3/>

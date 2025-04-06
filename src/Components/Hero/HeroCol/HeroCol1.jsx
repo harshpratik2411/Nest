@@ -1,9 +1,9 @@
 import React from 'react'; 
-import milk from '../../assets/Category/milk.svg'
-import clothing from '../../assets/Category/clothing.svg'
-import fruits from '../../assets/Category/fruits.svg'
-import baking from '../../assets/Category/baking-material.svg'
-import petfood from '../../assets/Category/petfood.svg'
+import milk from '../../../assets/Category/milk.svg'
+import clothing from '../../../assets/Category/clothing.svg'
+import fruits from '../../../assets/Category/fruits.svg'
+import baking from '../../../assets/Category/baking-material.svg'
+import petfood from '../../../assets/Category/petfood.svg'
 
 const categories = [
   { name: 'Milks & dairies', image: milk, count: 3 },
@@ -23,7 +23,7 @@ const CategoryItem = ({ name, image, count }) => (
   </div>
 );
 
-const Hero3 = () => {
+const HeroCol1 = () => {
   return ( 
     <div className="flex flex-col space-y-6 w-[300px] p-4 bg-custom-white">
       <div className="text-xl font-quicksand ml-1 font-bold text-custom-blue">Category
@@ -44,4 +44,4 @@ const Hero3 = () => {
   );
 };
 
-export default Hero3;
+export default HeroCol1;

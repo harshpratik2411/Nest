@@ -1,9 +1,9 @@
 import React from "react";
-import Banner from "../../assets/icons/Banner.png";
+import Banner from "../../../assets/icons/Banner.png";
 
-const Hero2 = () => {
+const HeroRow1 = () => {
   return (
-    <section className="relative w-[1240px] h-[540px] rounded-md py-16 px-8 flex justify-center items-center">
+    <section className="relative w-[1240px] h-[540px] ml-2 mt-4 rounded-md py-16 px-8 flex justify-center items-center">
       <img src={Banner} alt="" className="absolute inset-0 w-full h-full object-cover" />
       <div className="relative max-w-4xl text-center text-white">
         <h1 className="text-5xl font-quicksand -ml-[390px] font-bold w-[650px] h-[130px] text-custom-blue py-4 mx-auto text-left">
@@ -14,9 +14,9 @@ const Hero2 = () => {
           <input
             type="email"
             placeholder="Your email address"
-            className="flex-1 px-4 py-3 outline-none  text-custom-blue"
+            className="flex-1 px-4 py-3 outline-none text-custom-blue"
           />
-          <button className="bg-custom-green  text-custom-white px-6 py-3 rounded-full font-medium">
+          <button className="bg-custom-green text-custom-white px-6 py-3 rounded-full font-medium">
             Subscribe
           </button>
         </div>
@@ -25,4 +25,4 @@ const Hero2 = () => {
   );
 };
 
-export default Hero2;
+export default HeroRow1; // Only one export here is correct

@@ -22,6 +22,8 @@ export default {
         'custom-light-green':"#BCE3C9",
         'custom-fade-gray':"#F5F5DC",
         'custom-text-gray':"#687188",
+        'custom-text-lightgray':"#ADADAD",
+
       
         
       },

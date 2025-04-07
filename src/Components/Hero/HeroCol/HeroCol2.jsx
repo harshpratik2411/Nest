@@ -4,7 +4,7 @@ import Filter from '../../../assets/icons/Filter.svg'
 const HeroCol2 = () => {  
   const [price, setPrice] = useState(500);
   return (
-    <div className="bg-custom-white ml-2 p-6 rounded-2xl shadow-md  border-2 w-[280px]">
+    <div className="bg-custom-white ml-2 p-6 cursor-pointer rounded-2xl shadow-md  border-2 w-[280px]">
       <h2 className="text-lg font-quicksand font-semibold">Fill by price</h2> 
       <h3 className='border-t mt-2 h-[3px] w-[70px]  bg-custom-light-green'></h3>
       <h3 className='border-t h-[2px] opacity-100  text-custom-new-gray '></h3>
@@ -15,7 +15,7 @@ const HeroCol2 = () => {
           max="1000"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
-          className="w-full fontt-lato accent-custom-green"
+          className="w-full fontt-lato  accent-custom-green"
         />
         <div className="flex justify-between text-custom-green text-sm mt-2">
           <span>From: <strong>${price}</strong></span>
@@ -24,14 +24,21 @@ const HeroCol2 = () => {
       </div>
 
       <div className="mt-4">
-        <h3 className="font-semibold  font-lato text-custom-new-gray">Color</h3>
+        <h3 className="font-semibold   font-lato text-custom-new-gray">Color</h3>
         <div className="space-y-2 mt-2">
-          {['Red (56)', 'Green (78)', 'Blue (54)'].map((color, index) => (
-            <label key={index} className="flex text-custom-text-gray font-lato items-center space-x-2">
-              <input type="checkbox" className="accent-custom-green" />
-              <span>{color}</span>
-            </label>
-          ))}
+        {['Red (56)', 'Green (78)', 'Blue (54)'].map((color, index) => {
+  const checkboxColor = color.split('white')[0].toLowerCase();
+  return (
+    <label key={index} className="flex text-custom-text-gray font-lato items-center space-x-2">
+      <input 
+        type="checkbox" 
+        className={`accent-${checkboxColor} accent-custom-green`} 
+      />
+      <span>{color}</span>
+    </label>
+  );
+})}
+
         </div>
       </div>
 

@@ -29,8 +29,8 @@ const HeroCol3 = () => {
   ];
 
   return (
-    <div className="bg-custom-white w-[280px] mt-2 cursor-pointer  ml-2 items-center border-2  justify-center p-4 rounded-xl shadow-md">
-      <h2 className="text-xl  font-quicksand font-bold">New Products</h2> 
+    <div className="bg-custom-white w-[280px] h-[400px] mt-2 cursor-pointer  ml-2 items-center border-2  justify-center p-4 rounded-xl shadow-md">
+      <h2 className="text-xl  font-quicksand pt-4 font-bold">New Products</h2> 
       <h3 className='border-t mt-2 h-[3px] w-[70px]  bg-custom-light-green'></h3>
       <h3 className='border-t h-[2px] opacity-100  text-custom-new-gray '></h3>
       <div className="mt-4">

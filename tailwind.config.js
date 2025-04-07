@@ -20,6 +20,7 @@ export default {
         'custom-new-gray':"#7E7E7E",
         'custom-new-white':"#ECECEC",
         'custom-light-green':"#BCE3C9",
+        'custom-button-light-green':"#DEF9EC",
         'custom-fade-gray':"#F5F5DC",
         'custom-text-gray':"#687188",
         'custom-text-lightgray':"#ADADAD",

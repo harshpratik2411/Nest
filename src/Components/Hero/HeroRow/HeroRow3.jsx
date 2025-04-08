@@ -11,10 +11,11 @@ import Img9 from "../../../assets/Popular-pro/Img9.png";
 import Img10 from "../../../assets/Popular-pro/Img10.png";
 
 import CartIcon from "../../../assets/Popular-pro/cart.svg";
+import { div } from "motion/react-m";
 
 const products = [
   {
-    tag: "Hot",
+    tag: "",
     image: Img1,
     category: "Snack",
     title: "Seeds of Change Organic Quinoa",
@@ -24,7 +25,7 @@ const products = [
     oldPrice: 32.8,
   },
   {
-    tag: "Sale",
+    tag: "",
     image: Img2,
     category: "Hodo Foods",
     title: "All Natural Italian-Style Chicken Meatballs",
@@ -34,7 +35,7 @@ const products = [
     oldPrice: 55.8,
   },
   {
-    tag: "New",
+    tag: "",
     image: Img3,
     category: "Snack",
     title: "Angie’s Boomchickapop Sweet & Salty",
@@ -54,7 +55,7 @@ const products = [
     oldPrice: 19.8,
   },
   {
-    tag: "-14%",
+    tag: "",
     image: Img5,
     category: "Pet Foods",
     title: "Blue Diamond Almonds Lightly",
@@ -84,7 +85,7 @@ const products = [
     oldPrice: 33.8,
   },
   {
-    tag: "Sale",
+    tag: "",
     image: Img8,
     category: "Snack",
     title: "Encore Seafoods Stuffed Alaskan",
@@ -94,7 +95,7 @@ const products = [
     oldPrice: 37.8,
   },
   {
-    tag: "Hot",
+    tag: "",
     image: Img9,
     category: "Coffes",
     title: "Gorton’s Beer Battered Fish Fillets",
@@ -115,40 +116,39 @@ const products = [
   },
 ];
 
-const HeroRow3 = () => {
+const HeroRow3 = () => { 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2   lg:grid-cols-5 gap-3 p-6 -ml-2 bg-custom-white">
+    <div className="grid grid-cols-1 md:grid-cols-2    lg:grid-cols-5 gap-3  bg-custom-white">
       {products.map((product, index) => (
         <div
           key={index}
-          className="border w-[240px] h-[400px]  rounded-2xl shadow-md p-4 relative bg-custom-white "
+          className="border w-[240px] h-[400px]   rounded-2xl shadow-md  relative bg-custom-white "
         >
-          {product.tag && (
-            <span className="absolute top-2 left-2 cursor-pointer -ml-7 px-2 py-1 text-xs font-semibold rounded-md text-white bg-custom-tag">
-              {product.tag}
-            </span>
-          )}
+          <span className="absolute  top-2 left-2 -ml-2 cursor-pointer px-2 py-1 text-xs font-semibold rounded-md text-white bg-custom-tag">
+  {product.tag}
+</span>
+
           <img
             src={product.image}
             alt={product.title}
-            className="w-[200px] cursor-pointer font-bold font-quicksand h-[180px] object-contain mx-auto mb-4"
+            className="w-[200px] cursor-pointer  font-bold font-quicksand h-[180px] object-contain  mb-4"
           />
-          <p className="text-xs opacity-100 text-custom-text-lightgray font-lato  mb-1">
+          <p className="text-xs opacity-100 ml-2 text-custom-text-lightgray font-lato  mb-1">
             {product.category}
           </p>
-          <h3 className="font-bold cursor-pointer font-quicksand text-md mb-1">
+          <h3 className="font-bold cursor-pointer ml-2 font-quicksand text-md mb-1">
             {product.title}
           </h3>
           <p className="text-custom-text-lightgray mb-1">
-            <span className="mr-20  font-lato">⭐️</span>
+            <span className="mr-20  ml-2 font-lato">⭐️</span>
             {product.rating}
           </p>
 
-          <p className="text-xs ml-1 cursor-pointer text-custom-gray  mb-1">
+          <p className="text-xs ml-3 cursor-pointer text-custom-gray  mb-1">
             By <span className="text-custom-green">{product.brand}</span>
           </p>
           <div className="flex items-center mt-2 space-x-2">
-            <p className="text-lg -ml-1 cursor-pointer font-bold font-quicksand px-2 text-custom-green">
+            <p className="text-lg ml-1 cursor-pointer font-bold font-quicksand px-2 text-custom-green">
               ${product.price.toFixed(2)}
             </p>
             <p className="text-sm line-through cursor-pointer text-custom-gray">

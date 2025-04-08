@@ -6,7 +6,7 @@ const Top3 = () => {
     <div className="flex  items-center  justify-end  bg-custom-white text-custom-blue">
       {/* Headphone Icon */}
       <img
-        className="w-[32px] h-[32px]  ml-20"
+        className="w-[32px] h-[32px]  ml-44"
         src={headphone}
         alt="Headphone Icon"
       />

@@ -22,17 +22,19 @@ const Top2 = () => {
       ))}
     </div>
 
-      <div className="flex text-left  bg-custom-white p-2 rounded-lg w-full sm:w-96">
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={handleSearchChange}
-          placeholder="Search for items.."
-          className="w-full  text-custom-gray  rounded-lg text-sm outline-none search-input"
-        />
+    <div className="flex text-left bg-custom-white p-2 rounded-lg w-full sm:w-96">
+  <input
+    type="text"
+    value={searchTerm}
+    onChange={handleSearchChange}
+    placeholder="Search for items.."
+    className="w-full text-custom-gray rounded-lg text-sm outline-none search-input -ml-12"
+  />
+</div>
+
         <FiSearch className="text-gray-600 text-2xl cursor-pointer ml-3" />
       </div>
-    </div>
+    
   );
 };
 

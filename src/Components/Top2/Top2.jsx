@@ -4,7 +4,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 const Top2 = () => {
   return (
     <nav className="flex justify-center  mt-2  p-4 ">
-      <ul className="flex space-x-10 text-custom-blue">
+      <ul className="flex space-x-12 text-custom-blue">
         <li className="hover:text-custom-green cursor-pointer flex items-center gap-x-4">
           <img className="h-[21px] mb-2 w-[20px]" src={navDeals} alt="" /> 
           <span className="mb-2 ">Deals</span>

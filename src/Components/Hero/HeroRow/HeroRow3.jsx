@@ -118,11 +118,11 @@ const products = [
 
 const HeroRow3 = () => { 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2    lg:grid-cols-5 gap-3  bg-custom-white">
+    <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-5 gap-3  bg-custom-white">
       {products.map((product, index) => (
         <div
           key={index}
-          className="border w-[240px] h-[400px]   rounded-2xl shadow-md  relative bg-custom-white "
+          className="border-[1.5px] w-[238px] h-[380px] rounded-2xl relative bg-custom-white "
         >
           <span className="absolute  top-2 left-2 -ml-2 cursor-pointer px-2 py-1 text-xs font-semibold rounded-md text-white bg-custom-tag">
   {product.tag}

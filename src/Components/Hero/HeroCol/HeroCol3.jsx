@@ -31,16 +31,16 @@ const HeroCol3 = () => {
   return (
     <div className="bg-custom-white w-[280px] h-[400px] mt-2 cursor-pointer  ml-2 items-center border-2  justify-center p-4 rounded-xl shadow-md">
       <h2 className="text-xl  font-quicksand pt-4 font-bold">New Products</h2> 
-      <h3 className='border-t mt-2 h-[3px] w-[70px]  bg-custom-light-green'></h3>
+      <h3 className='border-t mt-2 h-[3px] w-[70px] cursor-pointer  bg-custom-light-green'></h3>
       <h3 className='border-t h-[2px] opacity-100  text-custom-new-gray '></h3>
       <div className="mt-4">
        
         {products.map((product) => ( 
           <div key={product.id} className="mt-4 flex items-center">
             <img src={product.image} alt={product.name} className="w-[80px] ml-4 h-[80px]" />
-            <div className="ml-4 flex flex-col">
+            <div className="ml-4 flex cursor-pointer flex-col">
               <h3 className="font-quicksand font-bold text-custom-green">{product.name}</h3>
-              <p className="text-custom-new-gray font-lato">{product.price}</p>
+              <p className="text-custom-new-gray  font-lato">{product.price}</p>
               <p className="text-yellow-400 "> {product.rating} ⭐️</p>
             </div>
           </div>

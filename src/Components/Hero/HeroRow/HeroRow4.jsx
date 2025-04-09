@@ -69,10 +69,10 @@ const HeroRow4 = () => {
           >
             <div className="relative ">
               <div className="relative "> 
-                <img src={deal.img} alt={deal.title} className="w-[304px] h-[270px]   font-quicksand font-bold text-custom-blue object-cover" />
+                <img src={deal.img} alt={deal.title} className="w-[304px] cursor-pointer h-[270px]  font-quicksand font-semibold text-custom-blue object-cover" />
                 
                 {/* Countdown Section */}
-                <div className="absolute bottom-2 space-x-3 left-2 flex  ml-5 text-center text-sm z-10">
+                <div className="absolute bottom-2 space-x-3 left-2 cursor-pointer flex  ml-5 text-center text-sm z-10">
                   <div className="bg-custom-white  px-2 items-center mb-24  w-[52px] h-[65px] font-quicksand text-md font-medium py-1 rounded">
                     <p className="text-custom-green m-1 font-semibold">{deal.days}</p>
                     <p className="  font-lato text-custom-text-lightgray">Days</p>

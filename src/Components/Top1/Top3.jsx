@@ -10,7 +10,7 @@ const Top3 = () => {
   return (
     <div className="flex justify-between items-center mt-5 p-4  gap-6">
     {/* Anchor Links with Icons */}
-    <div className="flex space-x-16 w-[20px]    h-[20px] gap-4">
+    <div className="flex space-x-[78px] w-[20px] ml-9    h-[20px] gap-4">
       <a href="#" className="flex items-center space-x-2 text-custom-new-gray">
       
         <img src={compare} alt="Nest Logo"  />

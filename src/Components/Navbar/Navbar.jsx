@@ -36,7 +36,7 @@ const Navbar = () => {
       </div>
 
       {/* Right Section */}  
-      <div className='mr-24 flex'>
+      <div className='mr-[33px] flex'>
 
       <div className="flex items-center  space-x-4">
         <a href="/help" className="hover:text-gray-400  text-[14px]">
@@ -51,17 +51,17 @@ const Navbar = () => {
         <div className="flex items-center space-x-2">
             <select
               style={{ backgroundColor: '#FFFFFF', color: '#7E7E7E' }}
-              className="bg font-lato bg-custom-new-white py-1 mt-2 ml-2 text-sm mb-3 rounded-md"
+              className="bg font-lato bg-custom-new-white py-1 mt-2 ml-4 text-sm mb-3 rounded-md"
             >
               <option value="en">English</option>
               <option value="es">Spanish</option>
               <option value="fr">French</option>
             </select> 
     
-            <p href="/order-tracking" className="hover:text-gray-400"/>|
+            <p href="/order-tracking" className=" hover:text-gray-400"/>|
             <select
               style={{ backgroundColor: '#FFFFFF', color: '#7E7E7E' }}
-              className="text-sm py-1 mb-3 mt-2 px-2 rounded-md"
+              className="text-sm py-1 mb-3 mt-2  px-2 rounded-md"
             >
               <option value="usd">USD</option>
               <option value="eur">EUR</option>

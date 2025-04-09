@@ -14,7 +14,7 @@ const categories = [
 ];
 
 const CategoryItem = ({ name, image, count }) => (
-  <div className="p-3 bg-custom-white border-2 border-custom-white-stroke opacity-100 font-lato text-custom-blue rounded-lg flex items-center justify-between">
+  <div className="p-3 bg-custom-white border-2 border-custom-white-stroke opacity-100 font-lato text-custom-blue rounded-lg flex items-center justify-between cursor-pointer">
     <div className='flex items-center'>
       <img className='w-[30px] h-[30px] mr-2' src={image} alt={name} />
       <span className='text-[16px] ml-2 font-lato'>{name}</span>

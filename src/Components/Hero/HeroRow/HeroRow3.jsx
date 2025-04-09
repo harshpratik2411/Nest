@@ -136,11 +136,11 @@ const HeroRow3 = () => {
           <p className="text-xs opacity-100 ml-2 text-custom-text-lightgray font-lato  mb-1">
             {product.category}
           </p>
-          <h3 className="font-bold cursor-pointer ml-2 font-quicksand text-md mb-1">
+          <h3 className="font-bold cursor-pointer ml-2 text-custom-blue font-quicksand text-md mb-1">
             {product.title}
           </h3>
           <p className="text-custom-text-lightgray mb-1">
-            <span className="mr-20  ml-2 font-lato">⭐️</span>
+            <span className="mr-20  text-yellow-400 ml-2 font-lato">★</span>
             {product.rating}
           </p>
 
@@ -156,7 +156,7 @@ const HeroRow3 = () => {
             </p>
             <div className=" bg-custom-button-light-green  cursor-pointer flex flex-row p-3 items-center rounded-sm w-[85px] h-[36px] justify-center">
               <img src={CartIcon} alt="Add to Cart" className="h-[20px]"/>
-              <span className="text-custom-gree cursor-pointer pl-1">Add</span>
+              <span className="text-custom-green cursor-pointer pl-1">Add</span>
             </div>
           </div>
         </div>

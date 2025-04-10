@@ -4,6 +4,7 @@ import Top1Main from './Components/Top1/TopMain'
 import Top2Main from './Components/Top2/Top2Main' 
 import HeroMain from './Components/Hero/HeroMain/HeroMain'
 import ShopByCat from './Components/ShopByCat/ShopByCat'
+import TrendingProducts from './Components/TredingProduct/TrendingProducts'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <Top2Main/> 
     <HeroMain/>
     <ShopByCat/>
+    <TrendingProducts/>
     </>
   )
 }

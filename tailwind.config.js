@@ -16,6 +16,7 @@ export default {
         'custom-blue': '#253D4E',
         'custom-white': '#FFFFFF',
         'custom-white-stroke': '#F2F3F4',
+        'custom-white-fillstroke': '#F4F6FA',
         'custom-gray': '#B6B6B6',
         'custom-new-gray':"#7E7E7E",
         'custom-new-white':"#ECECEC",

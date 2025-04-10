@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Img1 from '../../assets/ShopByCat/Img1.svg';
 import Img2 from '../../assets/ShopByCat/Img2.svg';
 import Img3 from '../../assets/ShopByCat/Img3.svg';
@@ -24,15 +24,44 @@ const categories = [
 
 const ShopByCat = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef(null);
 
+  // Function to go to next category
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % categories.length);
   };
 
+  // Function to go to previous category
   const goToPrev = () => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + categories.length) % categories.length
     );
+  };
+
+  // Handle wheel scrolling (mouse scroll)
+  const handleWheel = (event) => {
+    if (event.deltaY > 0) {
+      goToNext(); // Scroll down or forward
+    } else {
+      goToPrev(); // Scroll up or backward
+    }
+  };
+
+  // Handle swipe gestures (touch events)
+  const handleTouchStart = (e) => {
+    const touchStartX = e.touches[0].clientX;
+    containerRef.current.touchStartX = touchStartX;
+  };
+
+  const handleTouchEnd = (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchStartX = containerRef.current.touchStartX;
+
+    if (touchStartX - touchEndX > 50) {
+      goToNext(); // Swipe left, go to next
+    } else if (touchEndX - touchStartX > 50) {
+      goToPrev(); // Swipe right, go to previous
+    }
   };
 
   return (
@@ -59,7 +88,13 @@ const ShopByCat = () => {
         </button>
       </div>
 
-      <div className="relative">
+      <div
+        className="relative"
+        ref={containerRef}
+        onWheel={handleWheel}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd} // Adding the touch end event listener
+      >
         <div className="flex overflow-x-hidden">
           {/* This container will scroll horizontally */}
           <div
@@ -71,8 +106,8 @@ const ShopByCat = () => {
             {categories.concat(categories).map((cat, idx) => (
               <div
                 key={idx}
-                className="flex  transition-transform duration-300 ease-in-out hover:scale-105 flex-col cursor-pointer bg-custom-white-fillstroke items-center justify-center p-4 rounded-lg border-[1px] border-custom-white-stroke hover:shadow-md mx-2" // Added mx-2 for margin between items
-                style={{ width: '186px' }} // Adjust width to match your item size
+                className="flex transition-transform duration-300 ease-in-out hover:scale-105 flex-col cursor-pointer bg-custom-white-fillstroke items-center justify-center p-4 rounded-lg border-[1px] border-custom-white-stroke hover:shadow-md mx-2" // Added mx-2 for margin between items
+                style={{ width: '162px' }} // Adjust width to match your item size
               >
                 <img src={cat.icon} alt={cat.label} className="w-[120px] h-[90px] mb-2" />
                 <p className="text-[17px] w-[100px] font-quicksand font-bold text-custom-blue text-center">

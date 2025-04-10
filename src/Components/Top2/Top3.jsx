@@ -11,7 +11,7 @@ const Top3 = () => {
         alt="Headphone Icon"
       />
 
-      <div className="ml-3">
+      <div className="ml-3 mb-2.5">
         <div className="font-bold text-[27px] font-quicksand text-custom-green h-6">
           1900 - 888
         </div>

@@ -118,11 +118,11 @@ const products = [
 
 const HeroRow3 = () => { 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-5 gap-3  bg-custom-white">
+    <div className="grid grid-cols-1 md:grid-cols-2   mr-10 lg:grid-cols-5 gap-3  bg-custom-white">
       {products.map((product, index) => (
         <div
           key={index}
-          className="border-[1.5px] w-[238px] h-[380px] rounded-2xl relative bg-custom-white "
+          className="border-[1.5px] w-[220px] h-[380px] gap-1 rounded-2xl relative bg-custom-white "
         >
           <span className="absolute  top-2 left-2 -ml-2 cursor-pointer px-2 py-1 text-xs font-semibold rounded-md text-white bg-custom-tag">
   {product.tag}
@@ -154,9 +154,9 @@ const HeroRow3 = () => {
             <p className="text-sm line-through cursor-pointer text-custom-gray">
               ${product.oldPrice.toFixed(2)}
             </p>
-            <div className=" bg-custom-button-light-green  cursor-pointer flex flex-row p-3 items-center rounded-sm w-[85px] h-[36px] justify-center">
+            <div className=" bg-custom-button-light-green   cursor-pointer flex flex-row   items-center rounded-sm w-[76px] h-[33px] mr-[2px] justify-center">
               <img src={CartIcon} alt="Add to Cart" className="h-[20px]"/>
-              <span className="text-custom-green cursor-pointer pl-1">Add</span>
+              <span className="text-custom-green cursor-pointer  pl-1">Add</span>
             </div>
           </div>
         </div>

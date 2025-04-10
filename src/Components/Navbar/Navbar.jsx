@@ -8,7 +8,7 @@ const Navbar = () => {
         color: '#7E7E7E',
         borderBottom: '1px  #7E7E7E',
       }}
-      className="font-lato  p-2 flex -ml-[48px]  justify-between items-center"
+      className="font-lato  p-2 flex -ml-[8px]  justify-between items-center"
     >
       {/* Left Section */}
       <div className="flex space-x-3 mx-[120px] my-[6.5px] text-[13px]">
@@ -36,7 +36,7 @@ const Navbar = () => {
       </div>
 
       {/* Right Section */}  
-      <div className='mr-[33px] flex'>
+      <div className='mr-[18px] flex'>
 
       <div className="flex items-center  space-x-4">
         <a href="/help" className="hover:text-gray-400  text-[14px]">

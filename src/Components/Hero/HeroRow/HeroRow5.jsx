@@ -20,7 +20,7 @@ const HeroRow5 = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row   gap-10 p-4">
+    <div className="flex mr-[23px] flex-col md:flex-row px-2 gap-10 p-4">
       {cards.map((card, index) => (
         <div
           key={index}

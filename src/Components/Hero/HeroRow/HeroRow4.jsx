@@ -51,7 +51,7 @@ const deals = [
 
 const HeroRow4 = () => {
   return (
-    <div className=" py-10">
+    <div className=" mr-9 py-10">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-3xl ml-3 font-bold font-quicksand text-custom-blue">
           Deals Of The Day
@@ -60,7 +60,7 @@ const HeroRow4 = () => {
           href="#"
           className="text-custom-text-gray font-lato w-[65px] text-sm"
         />
-        <div className="flex text-custom-new-gray items-center ml-16">
+        <div className="flex text-custom-new-gray items-center mr-[13px] ml-12">
           All Deals
           <img className="w-[12px] h-[12px] ml-2" src={Arrow} alt="" />
         </div>

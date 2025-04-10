@@ -7,10 +7,12 @@ import Img5 from '../../assets/ShopByCat/Img5.svg';
 import Img6 from '../../assets/ShopByCat/Img6.svg';
 import Img7 from '../../assets/ShopByCat/Img7.svg';
 import Img8 from '../../assets/ShopByCat/Img8.svg';
-import Icon1 from '../../assets/ShopByCat/Icon1.svg';
-import Icon2 from '../../assets/ShopByCat/Icon2.svg';
+import LeftArrow from '../../assets/ShopByCat/LeftArrow.svg';
+import RightArrow from '../../assets/ShopByCat/RightArrow.svg';
+import Greaterthen from '../../assets/ShopByCat/Greaterthen.svg'
 
-const categories = [
+const categories = [ 
+    
   { label: 'Milks and Dairies', icon: Img1 },
   { label: 'Wines & Alcohol', icon: Img2 },
   { label: 'Clothing & Beauty', icon: Img3 },
@@ -21,36 +23,35 @@ const categories = [
   { label: 'Fresh Seafood', icon: Img8 },
 ];
 
-const ShopByCat = () => {
-  return (
-    <div className="w-full h-full py-10 px-6">
-  <div className="flex items-center justify-between mb-6">
-    <h2 className="text-2xl font-bold ml-2 text-[32px] font-quicksand text-custom-blue">
-      Shop by Categories
-    </h2>  
-
-    <div className="flex items-center text-custom-new-gray gap-2">
-      <img className='itmes-center text-center' src={Icon1} />
-      <img src={Icon2} />
-    </div>
-  </div>
-
-
-        {/* <h3>All Categories</h3> */}
-     
-      <div className="grid grid-cols-2sm:grid-cols-3 drop-shadow-md md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 h-[210px] gap-4">
-        {categories.map((cat, idx) => (
+const ShopByCat = () => {  
+    
+  return ( 
+    <div className="w-full space-x-2 py-6 px-6">
+      <div className="flex items-center   justify-between mb-6">
+        <h2 className="text-2xl ml-3 font-bold text-[32px] cursor-pointer font-quicksand text-custom-blue"> 
+          Shop by Categories 
+        </h2>   
+          <p className='-ml-[950px] flex  items-center cursor-pointer font-lato text-custom-gray opacity-100 mt-2'>All Categories
+            <img className='ml-4 mt-1 opacity-100' src={Greaterthen} alt="" />
+          </p>
+        <button className='flex items-center gap-4 '>
+         <img className='w-[25px] py-2 px-1 text-center  rounded-xl  bg-custom-white-stroke' src={LeftArrow}  />
+         <img className='w-[25px] py-2 px-1 ml-3 text-center   rounded-xl bg-custom-white-stroke mr-12' src={RightArrow}  />
+        </button>
+      </div>
+       
+      <div className="grid grid-cols-2 sm:grid-cols-3    md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 gap-4">
+        {categories.map((cat, idx) => ( 
           <div
             key={idx}
-            className="flex flex-col bg-custom-white-fillstroke items-center justify-center p-4 rounded-lg border border-custom-white-strokehover:shadow-md transition"
-          >
-            <img src={cat.icon} alt={cat.label} className="w-[120px] h-[90px]  mb-2" />
-            <p className="text-[17px]  w-[100px] font-quicksand font-bold text-custom-blue text-center">{cat.label}</p>
+            className="flex  transition-transform duration-300 ease-in-out hover:scale-105 flex-col cursor-pointer bg-custom-white-fillstroke items-center justify-center p-4 rounded-lg border border-custom-white-strokehover:shadow-md mr-8 "
+            > 
+            <img src={cat.icon} alt={cat.label} className="w-[120px]  h-[90px] mb-2" />
+            <p className="text-[17px] w-[100px] font-quicksand font-bold text-custom-blue text-center">{cat.label}</p>
           </div>
         ))}
       </div>
     </div> 
-   
   );
 };
 

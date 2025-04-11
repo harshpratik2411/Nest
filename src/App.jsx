@@ -6,6 +6,7 @@ import HeroMain from './Components/Hero/HeroMain/HeroMain'
 import ShopByCat from './Components/ShopByCat/ShopByCat'
 import TrendingProducts from './Components/TredingProduct/TrendingProducts'
 import Banner from './Components/Banner/BannerBottom'
+import Footer from './Components/Footer/Footer'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <ShopByCat/>
     <TrendingProducts/>
     <Banner/>
+    <Footer/>
     </>
   )
 }

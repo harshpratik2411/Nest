@@ -5,6 +5,7 @@ import Top2Main from './Components/Top2/Top2Main'
 import HeroMain from './Components/Hero/HeroMain/HeroMain'
 import ShopByCat from './Components/ShopByCat/ShopByCat'
 import TrendingProducts from './Components/TredingProduct/TrendingProducts'
+import Banner from './Components/Banner/BannerBottom'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <HeroMain/>
     <ShopByCat/>
     <TrendingProducts/>
+    <Banner/>
     </>
   )
 }

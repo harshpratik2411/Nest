@@ -27,4 +27,4 @@ const HeroRow1 = () => {
   );
 };
 
-export default HeroRow1; 
+export default HeroRow1;

@@ -7,7 +7,7 @@ const HeroMain = () => {
   return (
     <div className='flex '>
          <HeroColMain/>
-         <HeroRowMain/> 
+          <HeroRowMain/>  
     </div>
   );
 };

@@ -9,9 +9,7 @@ import Img7 from "../../../assets/Popular-pro/Img7.png";
 import Img8 from "../../../assets/Popular-pro/Img8.png";
 import Img9 from "../../../assets/Popular-pro/Img9.png";
 import Img10 from "../../../assets/Popular-pro/Img10.png";
-
 import CartIcon from "../../../assets/Popular-pro/cart.svg";
-import { div } from "motion/react-m";
 
 const products = [
   {
@@ -69,7 +67,7 @@ const products = [
     image: Img6,
     category: "Hodo Foods",
     title: "Chobani Complete Vanilla Greek",
-    rating: " (4.0)",
+    rating: "(4.0)",
     brand: "NestFood",
     price: 54.85,
     oldPrice: 55.8,
@@ -116,48 +114,47 @@ const products = [
   },
 ];
 
-const HeroRow3 = () => { 
+const HeroRow3 = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2   mr-10 lg:grid-cols-5 gap-3  bg-custom-white">
+    <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4 bg-custom-white">
       {products.map((product, index) => (
         <div
           key={index}
-          className="border-[1.5px] w-[220px] h-[380px] gap-1 rounded-2xl relative bg-custom-white "
+          className="border-[1.5px] w-full h-[380px] rounded-2xl relative bg-custom-white"
         >
-          <span className="absolute  top-2 left-2 -ml-2 cursor-pointer px-2 py-1 text-xs font-semibold rounded-md text-white bg-custom-tag">
-  {product.tag}
-</span>
-
+          {product.tag && (
+            <span className="absolute top-2 left-2 px-2 py-1 text-xs font-semibold rounded-md text-white bg-custom-tag">
+              {product.tag}
+            </span>
+          )}
           <img
             src={product.image}
             alt={product.title}
-            className="w-[200px] cursor-pointer  font-bold font-quicksand h-[180px] object-contain  mb-4"
+            className="w-full h-[180px] object-contain mb-4 px-2"
           />
-          <p className="text-xs opacity-100 ml-2 text-custom-text-lightgray font-lato  mb-1">
+          <p className="text-xs text-custom-text-lightgray font-lato mb-1 px-2">
             {product.category}
           </p>
-          <h3 className="font-bold cursor-pointer ml-2 text-custom-blue font-quicksand text-md mb-1">
+          <h3 className="font-bold cursor-pointer text-custom-blue font-quicksand text-md mb-1 px-2">
             {product.title}
           </h3>
-          <p className="text-custom-text-lightgray mb-1">
-            <span className="mr-20  text-yellow-400 ml-2 font-lato">★</span>
-            {product.rating}
+          <p className="text-custom-text-lightgray mb-1 px-2">
+            <span className="text-yellow-400 font-lato">★</span> {product.rating}
           </p>
-
-          <p className="text-xs ml-3 cursor-pointer text-custom-gray  mb-1">
+          <p className="text-xs text-custom-gray mb-1 px-2">
             By <span className="text-custom-green">{product.brand}</span>
           </p>
-          <div className="flex items-center mt-2 space-x-2">
-            <p className="text-lg ml-1 cursor-pointer font-bold font-quicksand px-2 text-custom-green">
+          <div className="flex items-center mt-2 space-x-2 px-2">
+            <p className="text-lg font-bold font-quicksand text-custom-green">
               ${product.price.toFixed(2)}
             </p>
-            <p className="text-sm line-through cursor-pointer text-custom-gray">
+            <p className="text-sm line-through text-custom-gray">
               ${product.oldPrice.toFixed(2)}
             </p>
-            <div className=" bg-custom-button-light-green   cursor-pointer flex flex-row   items-center rounded-sm w-[76px] h-[33px] mr-[2px] justify-center">
-              <img src={CartIcon} alt="Add to Cart" className="h-[20px]"/>
-              <span className="text-custom-green cursor-pointer  pl-1">Add</span>
-            </div>
+          </div>
+          <div className="mt-2 ml-2 bg-custom-button-light-green cursor-pointer flex items-center rounded-sm w-[90px] h-[33px] justify-center">
+            <img src={CartIcon} alt="Add to Cart" className="h-[20px]" />
+            <span className="text-custom-green pl-1">Add</span>
           </div>
         </div>
       ))}

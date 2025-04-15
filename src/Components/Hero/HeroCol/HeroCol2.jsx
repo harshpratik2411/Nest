@@ -4,7 +4,7 @@ import Filter from '../../../assets/icons/Filter.svg'
 const HeroCol2 = () => {  
   const [price, setPrice] = useState(500);
   return (
-    <div className="bg-custom-white ml-2 p-6 cursor-pointer rounded-2xl shadow-md border-2 w-[280px]">
+    <div className="bg-custom-white ml-2 p-6 cursor-pointer rounded-2xl shadow-md border-2 w-[280px] hidden lg:block">
       <h2 className="text-lg font-quicksand font-semibold">Fill by price</h2> 
       <h3 className='border-t mt-2 h-[3px] w-[70px]  bg-custom-light-green'></h3>
       <h3 className='border-t h-[2px] opacity-100 text-custom-new-gray '></h3>
@@ -65,4 +65,5 @@ const HeroCol2 = () => {
 };
 
 export default HeroCol2;
+
 

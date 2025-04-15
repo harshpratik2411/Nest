@@ -25,7 +25,7 @@ const CategoryItem = ({ name, image, count }) => (
 
 const HeroCol1 = () => {
   return ( 
-    <div className="flex flex-col space-y-6 w-[300px] p-4 bg-custom-white">
+    <div className="flex flex-col space-y-6 w-[300px] p-4 bg-custom-white hidden lg:block">
       <div className="text-xl font-quicksand ml-1 font-bold text-custom-blue">Category
         <h3 className='border-t mt-2 h-[3px] w-[70px]  bg-custom-light-green'></h3>
         <h3 className='border-t h-[2px] opacity-100  text-custom-new-gray '></h3>

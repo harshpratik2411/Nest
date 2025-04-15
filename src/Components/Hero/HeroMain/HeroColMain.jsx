@@ -6,10 +6,9 @@ import HeroCol3 from '../HeroCol/HeroCol3'
 const HeroMain = () => {
   return (
     <div className='flex flex-col'>
-     <HeroCol1/> 
-     <HeroCol2/>
-     <HeroCol3/>
-
+      <HeroCol1/> 
+      <HeroCol2/>
+      <HeroCol3/>
     </div>
   )
 }

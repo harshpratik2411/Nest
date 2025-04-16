@@ -21,7 +21,7 @@ const TopNav2 = () => {
       
       {/* Nest Logo - Always visible */}
       <div className="flex items-center ">
-        <img src={NestLogo} alt="Nest Logo" className="w-[170px] ml-7 cursor-pointer h-[55px]" />
+        <img src={NestLogo} alt="Nest Logo" className="lg:flex hidden w-[170px] ml-7 cursor-pointer h-[55px]" />
       </div>
 
       {/* Search + Category - Hidden on small, visible on lg */}
@@ -57,13 +57,13 @@ const TopNav2 = () => {
         </a>
 
         {/* Wishlist - Always visible */}
-        <a href="#" className="flex items-center space-x-1 text-custom-new-gray">
+        <a href="#" className="lg:flex hidden items-center space-x-1 text-custom-new-gray">
           <img src={wishlist} alt="Wishlist" />
           <span className='mt-2 text-sm'>Wishlist</span>
         </a>
 
         {/* Cart - Always visible */}
-        <a href="#" className="flex items-center space-x-1 text-custom-new-gray">
+        <a href="#" className="lg:flex hidden items-center space-x-1 text-custom-new-gray">
           <img src={cart} alt="Cart" />
           <span className='mt-2 text-sm'>Cart</span>
         </a>

@@ -2,7 +2,7 @@ import React from "react";
 import allcategory from "../../assets/icons/allcategory.svg";
 import navDeals from "../../assets/icons/navDeals.svg";
 import headphone from "../../assets/icons/headphone.svg";
-import { RiArrowDropDownLine } from "react-icons/ri";
+import dropdown from '../../assets/icons/dropdown.svg'
 
 const TopNav1 = () => {
   return (
@@ -28,21 +28,21 @@ const TopNav1 = () => {
               <span className="text-[16px]">Deals</span>
             </li>
             <li className="hover:text-custom-green text-custom-green text-[16px] flex cursor-pointer items-center">
-              Home<RiArrowDropDownLine className="mt-1" size={20} />
+              Home<img src={dropdown} className="mt-1 ml-2" size={20} />
             </li>
             <li className="hover:text-custom-green cursor-pointer text-[16px]">About</li>
             <li className="hover:text-custom-green cursor-pointer flex items-center text-[16px]">
-              Shop <RiArrowDropDownLine className="mt-1" size={20} />
+              Shop <img src={dropdown} className="mt-1 ml-2" size={20} />
             </li>
             <li className="hover:text-custom-green text-[16px] cursor-pointer flex items-center">
-              Vendors <RiArrowDropDownLine className="mt-1" size={20} />
+              Vendors <img src={dropdown} className="mt-1 ml-2" size={20} />
             </li>
             <li className="hover:text-custom-green text-[16px] cursor-pointer flex items-center">
-              Mega Menu <RiArrowDropDownLine className="mt-1" size={20} />
+              Mega Menu <img src={dropdown} className="mt-1 ml-2" size={20} />
             </li>
             <li className="hover:text-custom-green text-[16px] cursor-pointer">Blog</li>
             <li className="hover:text-custom-green cursor-pointer flex items-center text-[16px]">
-              Pages <RiArrowDropDownLine className="mt-1" size={20} />
+              Pages <img src={dropdown} className="mt-1 ml-2" size={20} />
             </li>
             <li className="hover:text-custom-green text-[16px] cursor-pointer">Contact</li>
           </ul>

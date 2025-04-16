@@ -15,7 +15,7 @@ function App() {
     <Navbar/>  
    <TopNav2/>
    <TopNav1/>
-    {/* <HeroMain/> */}
+      <HeroMain/> 
     {/* <ShopByCat/>
     <TrendingProducts/>
     <Banner/>

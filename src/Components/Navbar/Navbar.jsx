@@ -1,39 +1,60 @@
 import React, { useState } from 'react';
+import NestLogo from '../../assets/Nest/NestLogo.svg';
+import cart from '../../assets/icons/cart.svg';
+import wishlist from '../../assets/icons/wishlist.svg';
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
     <>
-      {/* Hamburger Icon for sm/md screens */}
-      <div className="lg:hidden p-4 flex justify-between items-center">
-        <button
-          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-          className="text-custom-gray focus:outline-none"
-        >
-          {/* Hamburger icon */}
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+      {/* Hamburger Icon and Logo/Cart/Wishlist for sm screens */}
+      <div className="lg:hidden p-4 w-full">
+        <div className="w-full flex items-center justify-between">
+          {/* Hamburger Icon */}
+          <button
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            className="text-custom-gray focus:outline-none"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
+          {/* Nest Logo */}
+          <img src={NestLogo} alt="Nest Logo" className="w-[100px] h-[38px] cursor-pointer" />
+
+          {/* Wishlist + Cart */}
+          <div className="flex items-center space-x-2">
+            <a href="#" className="flex items-center space-x-2 text-custom-new-gray">
+              <img src={wishlist} alt="Wishlist" className="w-5 h-5" />
+              <span className='text-sm'></span>
+            </a>
+
+            <a href="#" className="flex items-center space-x-2 text-custom-new-gray">
+              <img src={cart} alt="Cart" className="w-5 h-5" />
+              <span className='text-sm'></span>
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Sidebar for sm/md screens */}
       {isSidebarOpen && (
-        <div className="lg:hidden bg-white border-r border-gray-200 w-64 p-4 fixed top-0 left-0 h-full z-50">
+        <div className="lg:hidden bg-custom-white border-r border-gray-200 w-64 p-4 fixed top-0 left-0 h-full z-50">
           <button
             onClick={() => setIsSidebarOpen(false)}
             className="text-gray-600 mb-4"
           >
             Close ✖️
           </button>
-          <nav className="flex  flex-col font-lato space-y-4 opacity-100 text-sm text-custom-new-gray">
+          <nav className="flex flex-col font-lato space-y-4 opacity-100 text-sm text-custom-new-gray">
             <a href="/about-us" className="hover:text-gray-400">About Us</a>
             <a href="/my-account" className="hover:text-gray-400">My Account</a>
             <a href="/wishlist" className="hover:text-gray-400">Wishlist</a>
@@ -61,14 +82,14 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Your Original Navbar – visible only on large screens */}
+      {/* Original Navbar – visible only on large screens */}
       <nav
         style={{
           backgroundColor: '#FFFFFF',
           color: '#7E7E7E',
           borderBottom: '1px  #7E7E7E',
         }}
-        className=" p-2 font-lato hidden lg:flex -ml-[70px] justify-between items-center"
+        className="p-2 font-lato hidden lg:flex -ml-[70px] justify-between items-center"
       >
         {/* Left Section */}
         <div className="flex space-x-3 mx-[120px] my-[6.5px] text-[13px]">
@@ -96,11 +117,11 @@ const Navbar = () => {
 
         {/* Right Section */}
         <div className='mr-[18px] flex'>
-          <div className="flex items-center  space-x-4">
-            <a href="/help" className="hover:text-gray-400  text-[14px]">
+          <div className="flex items-center space-x-4">
+            <a href="/help" className="hover:text-gray-400 text-[14px]">
               Need help? Call Us:
             </a>
-            <span style={{ color: '#3BB77E' }} className="font-lato ">
+            <span style={{ color: '#3BB77E' }} className="font-lato">
               +1800 900
             </span>
           </div>
@@ -116,7 +137,7 @@ const Navbar = () => {
               <option value="fr">French</option>
             </select>
 
-            <p className=" hover:text-gray-400">|</p>
+            <p className="hover:text-gray-400">|</p>
             <select
               style={{ backgroundColor: '#FFFFFF', color: '#7E7E7E' }}
               className="text-sm py-1 mb-3 mt-2 px-2 rounded-md"

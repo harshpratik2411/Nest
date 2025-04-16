@@ -116,45 +116,48 @@ const products = [
 
 const HeroRow3 = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4 bg-custom-white">
+    <div className="grid grid-cols-2 md:grid-cols-4 mt-4 lg:grid-cols-5 gap-[10px] p-1 bg-custom-white">
       {products.map((product, index) => (
         <div
           key={index}
-          className="border-[1.5px] w-full h-[380px] rounded-2xl relative bg-custom-white"
+          className="border-[1.5px] sm:w-full  lg:w-full lg:h-[360px] rounded-2xl relative bg-custom-white pb-3"
         >
           {product.tag && (
-            <span className="absolute top-2 left-2 px-2 py-1 text-xs font-semibold rounded-md text-white bg-custom-tag">
+            <span className="absolute top-2 cursor-pointer left-2 px-2 py-1 text-[10px] sm:text-xs font-semibold rounded-md text-white bg-custom-tag">
               {product.tag}
             </span>
           )}
           <img
             src={product.image}
             alt={product.title}
-            className="w-full h-[180px] object-contain mb-4 px-2"
+            className="w-full h-[160px] cursor-pointer object-contain px-2"
           />
-          <p className="text-xs text-custom-text-lightgray font-lato mb-1 px-2">
+          <p className="text-[9px] sm:text-xs text-custom-text-lightgray font-lato mb-0.5 px-2">
             {product.category}
           </p>
-          <h3 className="font-bold cursor-pointer text-custom-blue font-quicksand text-md mb-1 px-2">
+          <h3 className="text-[11px] sm:text-base font-bold cursor-pointer text-custom-blue font-quicksand mb-0.5 px-2 leading-snug">
             {product.title}
           </h3>
-          <p className="text-custom-text-lightgray mb-1 px-2">
+          <p className="text-[10px] sm:text-sm text-custom-text-lightgray mb-0.5 px-2">
             <span className="text-yellow-400 font-lato">★</span> {product.rating}
           </p>
-          <p className="text-xs text-custom-gray mb-1 px-2">
+          <p className="text-[9px] sm:text-xs text-custom-gray mb-1 px-2">
             By <span className="text-custom-green">{product.brand}</span>
           </p>
-          <div className="flex items-center mt-2 space-x-2 px-2">
-            <p className="text-lg font-bold font-quicksand text-custom-green">
-              ${product.price.toFixed(2)}
-            </p>
-            <p className="text-sm line-through text-custom-gray">
-              ${product.oldPrice.toFixed(2)}
-            </p>
-          </div>
-          <div className="mt-2 ml-2 bg-custom-button-light-green cursor-pointer flex items-center rounded-sm w-[90px] h-[33px] justify-center">
-            <img src={CartIcon} alt="Add to Cart" className="h-[20px]" />
-            <span className="text-custom-green pl-1">Add</span>
+
+          <div className="flex items-center justify-between mt-1 px-2">
+            <div className="flex items-center space-x-2">
+              <p className="text-xs sm:text-lg font-bold font-quicksand text-custom-green">
+                ${product.price.toFixed(2)}
+              </p>
+              <p className="text-[10px] sm:text-sm line-through text-custom-gray">
+                ${product.oldPrice.toFixed(2)}
+              </p>
+            </div>
+            <div className="bg-custom-button-light-green ml-1  cursor-pointer flex items-center rounded-sm px-2 py-1 sm:px-3 sm:py-1.5">
+              <img src={CartIcon} alt="Add to Cart" className="h-[14px] cursor-pointer -ml-1 sm:h-[18px]" />
+              <span className="text-custom-green  cursor-pointer pl-1 text-xs sm:text-base">Add</span>
+            </div>
           </div>
         </div>
       ))}

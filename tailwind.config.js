@@ -25,6 +25,9 @@ export default {
         'custom-fade-gray':"#F5F5DC",
         'custom-text-gray':"#687188",
         'custom-text-lightgray':"#ADADAD",
+        'custom-pink':"#F74B81",
+        'custom-light-blue':"#67BCEE",
+        'custom-orange':"#F59758",
 
       
         

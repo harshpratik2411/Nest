@@ -51,7 +51,7 @@ const deals = [
 
 const HeroRow4 = () => {
   return (
-    <div className=" mr-9 py-10">
+    <div className=" m-2 flex-w py-10">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-3xl ml-3 font-bold font-quicksand text-custom-blue">
           Deals Of The Day
@@ -69,7 +69,7 @@ const HeroRow4 = () => {
         {deals.map((deal) => (
           <div
             key={deal.id}
-            className="bg-custom-white rounded-2xl  mb-16 shadow-md overflow-visible relative"
+            className="bg-custom-white  rounded-2xl  mb-16 shadow-md overflow-visible relative"
           >
             <div className="relative">
               <div className="relative">
@@ -81,24 +81,24 @@ const HeroRow4 = () => {
                 </div>
 
                 {/* Countdown Section */}
-                <div className="absolute bottom-2 space-x-3 left-2 cursor-pointer flex ml-5 text-center text-sm z-10">
-                  <div className="bg-custom-white px-2 items-center mb-24 w-[52px] h-[65px] font-quicksand text-md font-medium py-1 rounded">
+                <div className="absolute bottom-2 space-x-3 left-2 cursor-pointer flex ml-2 text-center text-sm z-10">
+                  <div className="bg-custom-white px-2 items-center mb-24 w-[50px] h-[62px] font-quicksand text-md font-medium py-1 rounded">
                     <p className="text-custom-green m-1 font-semibold">
                       {deal.days}
                     </p>
                     <p className="font-lato text-custom-text-lightgray">Days</p>
                   </div>
-                  <div className="bg-custom-white px-2 items-center w-[52px] h-[65px] font-quicksand text-md font-medium py-1 rounded">
+                  <div className="bg-custom-white px-2 items-center w-[50px] h-[62px] font-quicksand text-md font-medium py-1 rounded">
                     <p className="text-custom-green m-1 font-semibold">08</p>
                     <p className="font-lato text-custom-text-lightgray">
                       Hours
                     </p>
                   </div>
-                  <div className="bg-custom-white px-2 items-center w-[52px] h-[65px] font-quicksand text-md font-medium py-1 rounded">
+                  <div className="bg-custom-white px-2 items-center w-[50px] h-[62px] font-quicksand text-md font-medium py-1 rounded">
                     <p className="text-custom-green m-1 font-semibold">17</p>
                     <p className="font-lato text-custom-text-lightgray">Mins</p>
                   </div>
-                  <div className="bg-custom-white px-2 items-center w-[52px] h-[65px] font-quicksand text-md font-medium py-1 rounded">
+                  <div className="bg-custom-white px-2 items-center w-[50px] h-[62px] font-quicksand text-md font-medium py-1 rounded">
                     <p className="text-custom-green m-1 font-semibold">59</p>
                     <p className="font-lato text-custom-text-lightgray">Sec</p>
                   </div>

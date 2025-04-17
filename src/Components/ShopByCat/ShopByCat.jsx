@@ -71,14 +71,14 @@ const ShopByCat = () => {
           All Categories
           <img className="ml-4 mt-1 opacity-100" src={Greaterthen} alt="" />
         </p>
-        <button className="flex items-center gap-4">
+        <button className="flex  items-center gap-4">
           <img
-            className="w-[25px] py-[8px] px-[7px] text-center rounded-xl bg-custom-white-stroke cursor-pointer"
+            className="w-[25px]  py-[8px] px-[7px] text-center rounded-xl bg-custom-white-stroke cursor-pointer"
             src={LeftArrow}
             onClick={goToPrev}
           />
           <img
-            className="w-[25px] py-[8px] px-[7px] ml-3 text-center rounded-xl bg-custom-white-stroke mr-12 cursor-pointer"
+            className="w-[25px] py-[8px] px-[7px] ml-3  text-center rounded-xl bg-custom-white-stroke mr-12 cursor-pointer"
             src={RightArrow}
             onClick={goToNext}
           />

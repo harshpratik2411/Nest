@@ -17,8 +17,8 @@ import twitter from '../../assets/Footer/x.svg'
 
 const Footer = () => {
   return (
-    <footer className="bg-custom-white-fillstroke  font-quicksand text-custom-text-gray text-sm">
-      <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+    <footer className="bg-custom-white-fillstroke mt-4 lg:ml-0 ml-4 font-quicksand text-custom-text-gray text-sm">
+      <div className="max-w-7xl mx-auto  px-4 py-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
         
         {/* 1. Logo & Contact Info */}
         <div className="space-y-3 font-lato">
@@ -103,7 +103,7 @@ const Footer = () => {
         <div>
           <h4 className="font-bold cursor-pointer mt-5 text-custom-blue mb-3">Install App</h4>
           <p className=" mt-16 mb-4"></p>
-          <div className="flex  gap-3">
+          <div className="flex flex-col gap-3">
             <img src={appstore} alt="App Store" className="w-[110px] h-[45px]" />
             <img src={playstore} alt="Google Play" className="w-[110px] h-[45px]" />
           </div>
@@ -119,7 +119,7 @@ const Footer = () => {
           
           {/* Left */}
           <div> 
-            <p>
+            <p className='ml-10'>
               © 2022, <span className="text-custom-green font-semibold">Nest</span> - HTML Ecommerce Template. <br />
               All rights reserved
             </p>

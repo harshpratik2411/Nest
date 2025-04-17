@@ -25,29 +25,29 @@ const categories = [
 const ShopByCat = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef(null);
+  const isScrolling = useRef(false);
 
-  // Function to go to next category
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % categories.length);
   };
 
-  // Function to go to previous category
   const goToPrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + categories.length) % categories.length
-    );
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + categories.length) % categories.length);
   };
 
-  // Handle wheel scrolling (mouse scroll)
   const handleWheel = (event) => {
-    if (event.deltaY > 0) {
-      goToNext(); // Scroll down or forward
-    } else {
-      goToPrev(); // Scroll up or backward
-    }
+    event.preventDefault();
+    if (isScrolling.current) return;
+    isScrolling.current = true;
+
+    if (event.deltaY > 0) goToNext();
+    else goToPrev();
+
+    setTimeout(() => {
+      isScrolling.current = false;
+    }, 400);
   };
 
-  // Handle swipe gestures (touch events)
   const handleTouchStart = (e) => {
     const touchStartX = e.touches[0].clientX;
     containerRef.current.touchStartX = touchStartX;
@@ -57,20 +57,17 @@ const ShopByCat = () => {
     const touchEndX = e.changedTouches[0].clientX;
     const touchStartX = containerRef.current.touchStartX;
 
-    if (touchStartX - touchEndX > 50) {
-      goToNext(); // Swipe left, go to next
-    } else if (touchEndX - touchStartX > 50) {
-      goToPrev(); // Swipe right, go to previous
-    }
+    if (touchStartX - touchEndX > 50) goToNext();
+    else if (touchEndX - touchStartX > 50) goToPrev();
   };
 
   return (
     <div className="w-full py-6 px-6">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl ml-3 font-bold text-[32px] cursor-pointer font-quicksand text-custom-blue">
+        <h2 className="lg:text-3xl -ml-2 text-xl font-bold text-[32px] cursor-pointer font-quicksand text-custom-blue">
           Shop by Categories
         </h2>
-        <p className="-ml-[810px] flex items-center cursor-pointer font-lato text-custom-gray opacity-100 mt-2">
+        <p className="-ml-[840px] flex items-center cursor-pointer font-lato text-custom-gray opacity-100 mt-2">
           All Categories
           <img className="ml-4 mt-1 opacity-100" src={Greaterthen} alt="" />
         </p>
@@ -88,26 +85,24 @@ const ShopByCat = () => {
         </button>
       </div>
 
+      {/* Large screen layout */}
       <div
-        className="relative"
+        className="relative -ml-2 hidden lg:block"
         ref={containerRef}
-        onWheel={handleWheel}
+        onWheelCapture={handleWheel}
         onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd} // Adding the touch end event listener
+        onTouchEnd={handleTouchEnd}
       >
         <div className="flex overflow-x-hidden">
-          {/* This container will scroll horizontally */}
           <div
             className="flex transition-transform duration-500 ease-in-out"
-            style={{
-              transform: `translateX(-${currentIndex * 250}px)`, // Adjust 250px to the width of the item
-            }}
+            style={{ transform: `translateX(-${currentIndex * 250}px)` }}
           >
             {categories.concat(categories).map((cat, idx) => (
               <div
                 key={idx}
-                className="flex transition-transform duration-300 ease-in-out hover:scale-105 flex-col cursor-pointer bg-custom-white-fillstroke items-center justify-center p-4 rounded-lg border-[1px] border-custom-white-stroke hover:shadow-md mx-2" // Added mx-2 for margin between items
-                style={{ width: '162px' }} // Adjust width to match your item size
+                className="flex transition-transform duration-300 ease-in-out hover:scale-105 flex-col cursor-pointer bg-custom-white-fillstroke items-center justify-center p-4 rounded-lg border-[1px] border-custom-white-stroke hover:shadow-md mx-2"
+                style={{ width: '162px' }}
               >
                 <img src={cat.icon} alt={cat.label} className="w-[120px] h-[90px] mb-2" />
                 <p className="text-[17px] w-[100px] font-quicksand font-bold text-custom-blue text-center">
@@ -116,6 +111,24 @@ const ShopByCat = () => {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Small screen layout */}
+      <div className="block lg:hidden overflow-x-auto">
+        <div className="flex gap-4 min-w-max px-2">
+          {categories.map((cat, idx) => (
+            <div
+              key={idx}
+              className="flex-shrink-0 flex flex-col cursor-pointer bg-custom-white-fillstroke items-center justify-center p-4 rounded-lg border-[1px] border-custom-white-stroke hover:shadow-md"
+              style={{ width: '140px' }}
+            >
+              <img src={cat.icon} alt={cat.label} className="w-[100px] h-[80px] mb-2" />
+              <p className="text-[15px] font-quicksand font-bold text-custom-blue text-center">
+                {cat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

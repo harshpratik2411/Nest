@@ -51,9 +51,9 @@ const deals = [
 
 const HeroRow4 = () => {
   return (
-    <div className=" m-2 flex-w py-10">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-3xl ml-3 font-bold font-quicksand text-custom-blue">
+    <div className="m-2 flex-w -ml-[9px] py-10">
+      <div className="flex  justify-between items-center mb-6">
+        <h2 className="text-3xl ml-5  font-bold font-quicksand text-custom-blue">
           Deals Of The Day
         </h2>
         <a
@@ -65,20 +65,20 @@ const HeroRow4 = () => {
           <img className="w-[12px] h-[12px] ml-2" src={Arrow} alt="" />
         </div>
       </div>
-      <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4 h-[350px]  gap-6">
+
+      <div className="grid grid-cols-1   sm:grid-cols-2 md:grid-cols-4  gap-8 px-2 sm:px-4 h-auto">
         {deals.map((deal) => (
           <div
             key={deal.id}
-            className="bg-custom-white  rounded-2xl  mb-16 shadow-md overflow-visible relative"
+            className="bg-custom-white rounded-2xl mb-12 sm:mb-16 shadow-md overflow-visible relative"
           >
-            <div className="relative">
-              <div className="relative">
-                <div className="text-center">
-                  <img
-                    src={deal.img}
-                    className="w-[304px] mt-4 cursor-pointer h-[270px] font-quicksand font-semibold text-custom-blue object-cover"
-                  />
-                </div>
+            <div className="relative ">
+              <div className="relative  text-left">
+                <img
+                  src={deal.img}
+                  className="w-full h-auto max-h-[270px] mt-4   cursor-pointer font-quicksand font-semibold text-custom-blue object-cover"
+                  alt={deal.title}
+                />
 
                 {/* Countdown Section */}
                 <div className="absolute bottom-2 space-x-3 left-2 cursor-pointer flex ml-2 text-center text-sm z-10">
@@ -106,35 +106,35 @@ const HeroRow4 = () => {
               </div>
             </div>
 
-            <div className="absolute bottom-0   left-0 right-0 px-4 translate-y-1/2 z-10">
-              <div className="bg-custom-white  rounded-2xl p-4 shadow-md">
-                <h3 className="font-semibold text-custom-blue text-center  mb-1 leading-tight">
+            <div className="absolute bottom-0 left-0 right-0 px-4 translate-y-1/2 z-10">
+              <div className="bg-custom-white rounded-2xl p-4 shadow-md">
+                <h3 className="font-semibold text-custom-blue text-left ml-1 mb-1 leading-tight">
                   {deal.title}
                 </h3>
-                <p className="text-custom-text-lightgray py-1 ml-6 mb-1">
-                  <span className="mr-16 mb-1  text-yellow-400  font-lato">
+                <p className="text-custom-text-lightgray ml-1 py-1 mb-1">
+                  <span className="mr-10 mb-1 text-yellow-400 font-lato">
                     ★
                   </span>
                   {deal.rating}
                 </p>
                 <p className="text-xs mb-2">
-                  <span className="text-custom-gray ml-6 mt-1 opacity-100">
+                  <span className="text-custom-gray ml-1  mt-1 opacity-100">
                     By
                   </span>
                   <span className="text-custom-green ml-1">{deal.brand}</span>
                 </p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-custom-green ml-6  font-quicksand font-bold text-lg">
+                    <span className="text-custom-green  ml-1 font-quicksand font-bold text-lg">
                       ${deal.price}
                     </span>
-                    <span className="text-custom-gray font-quicksand  font-bold line-through ml-2 text-sm">
+                    <span className="text-custom-gray font-quicksand font-bold line-through ml-2 text-sm">
                       ${deal.originalPrice}
                     </span>
                   </div>
                   <button className="bg-custom-button-light-green text-custom-green font-medium px-4 py-1 rounded flex items-center">
-                    <img src={CartIcon} className="h-[20px]" />
-                    <span className="text-custom-green font-lato  bold cursor-pointer pl-1">
+                    <img src={CartIcon} className="h-[20px]" alt="Cart" />
+                    <span className="text-custom-green font-lato bold cursor-pointer pl-1">
                       Add
                     </span>
                   </button>

@@ -20,22 +20,22 @@ const HeroRow5 = () => {
   ];
 
   return (
-    <div className="flex mr-[23px] flex-col md:flex-row px-2 gap-10 p-4">
+    <div className="flex flex-col md:flex-row px-2 gap-4 p-4 mr-[23px]">
       {cards.map((card, index) => (
         <div
           key={index}
-          className="relative w-[0px] md:w-1/3 -ml-4 h-[250px] rounded-xl overflow-hidden shadow-sm"
+          className="relative w-full md:w-1/2 h-[250px] rounded-xl overflow-hidden shadow-sm"
         >
           <img
             src={card.image}
             alt={card.title}
-            className="absolute inset-0 w-full  h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 flex flex-col justify-center items-start p-6">
-            <div className="text-custom-blue w-[200px] text-[22px]  font-semibold mb-8 p-2 rounded-md">
+            <div className="text-custom-blue w-[200px] text-[22px] font-semibold mb-8 p-2 rounded-md">
               {card.title}
             </div>
-            <button className="bg-custom-green text-custom-white font-quicksand  px-4 py-2 rounded-md text-sm font-bold">
+            <button className="bg-custom-green text-custom-white font-quicksand px-4 py-2 rounded-md text-sm font-bold">
               Shop Now
             </button>
           </div>

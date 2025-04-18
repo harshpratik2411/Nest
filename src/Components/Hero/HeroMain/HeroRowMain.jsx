@@ -7,12 +7,12 @@ import HeroRow5 from '../HeroRow/HeroRow5';
 
 const HeroRowMain = () => {
   return (
-    <div> 
-    <HeroRow1/>
-    <HeroRow2/>
-    <HeroRow3/>
-    <HeroRow4/>
-    <HeroRow5/>
+    <div > 
+     <HeroRow1/> 
+      <HeroRow2/> 
+     <HeroRow3/>
+     <HeroRow4/>
+     <HeroRow5/>
     </div>
   );
 };

@@ -1,21 +1,19 @@
 import React from "react";
-import Img1 from "../../../assets/Popular-pro/Img1.png";
-import Img2 from "../../../assets/Popular-pro/Img2.png";
-import Img3 from "../../../assets/Popular-pro/Img3.png";
-import Img4 from "../../../assets/Popular-pro/Img4.png";
-import Img5 from "../../../assets/Popular-pro/Img5.png";
-import Img6 from "../../../assets/Popular-pro/Img6.png";
-import Img7 from "../../../assets/Popular-pro/Img7.png";
-import Img8 from "../../../assets/Popular-pro/Img8.png";
-import Img9 from "../../../assets/Popular-pro/Img9.png";
-import Img10 from "../../../assets/Popular-pro/Img10.png";
-
-import CartIcon from "../../../assets/Popular-pro/cart.svg";
-import { div } from "motion/react-m";
+import Img1 from "../../../assets/Popular-pro2/Img1.png";
+import Img2 from "../../../assets/Popular-pro2/Img2.png";
+import Img3 from "../../../assets/Popular-pro2/Img3.png";
+import Img4 from "../../../assets/Popular-pro2/Img4.png";
+import Img5 from "../../../assets/Popular-pro2/Img5.png";
+import Img6 from "../../../assets/Popular-pro2/Img6.png";
+import Img7 from "../../../assets/Popular-pro2/Img7.png";
+import Img8 from "../../../assets/Popular-pro2/Img8.png";
+import Img9 from "../../../assets/Popular-pro2/Img9.png";
+import Img10 from "../../../assets/Popular-pro2/Img10.png";
+import cartIcon from "../../../assets/Popular-pro2/cart.svg";
 
 const products = [
   {
-    tag: "",
+    tag: "Hot",
     image: Img1,
     category: "Snack",
     title: "Seeds of Change Organic Quinoa",
@@ -25,7 +23,7 @@ const products = [
     oldPrice: 32.8,
   },
   {
-    tag: "",
+    tag: "Sale",
     image: Img2,
     category: "Hodo Foods",
     title: "All Natural Italian-Style Chicken Meatballs",
@@ -35,7 +33,7 @@ const products = [
     oldPrice: 55.8,
   },
   {
-    tag: "",
+    tag: "New",
     image: Img3,
     category: "Snack",
     title: "Angie’s Boomchickapop Sweet & Salty",
@@ -55,7 +53,7 @@ const products = [
     oldPrice: 19.8,
   },
   {
-    tag: "",
+    tag: "-14%",
     image: Img5,
     category: "Pet Foods",
     title: "Blue Diamond Almonds Lightly",
@@ -69,7 +67,7 @@ const products = [
     image: Img6,
     category: "Hodo Foods",
     title: "Chobani Complete Vanilla Greek",
-    rating: " (4.0)",
+    rating: "(4.0)",
     brand: "NestFood",
     price: 54.85,
     oldPrice: 55.8,
@@ -85,7 +83,7 @@ const products = [
     oldPrice: 33.8,
   },
   {
-    tag: "",
+    tag: "Sale",
     image: Img8,
     category: "Snack",
     title: "Encore Seafoods Stuffed Alaskan",
@@ -95,7 +93,7 @@ const products = [
     oldPrice: 37.8,
   },
   {
-    tag: "",
+    tag: "Hot",
     image: Img9,
     category: "Coffes",
     title: "Gorton’s Beer Battered Fish Fillets",
@@ -116,47 +114,75 @@ const products = [
   },
 ];
 
-const HeroRow3 = () => { 
+const getTagStyle = (tag) => {
+  switch (tag) {
+    case "Hot":
+      return "bg-custom-pink text-custom-white";
+    case "Sale":
+      return "bg-custom-light-blue text-custom-white";
+    case "New":
+      return "bg-custom-green text-custom-white";
+    default:
+      case "Hot":
+      return "bg-custom-orange text-custom-white";  
+     
+  }
+};
+
+const HeroRow3 = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2   mr-10 lg:grid-cols-5 gap-3  bg-custom-white">
+    <div className="grid grid-cols-2 md:grid-cols-4 mt-4 lg:grid-cols-5 gap-[10px]  p-1 bg-custom-white">
       {products.map((product, index) => (
         <div
           key={index}
-          className="border-[1.5px] w-[220px] h-[380px] gap-1 rounded-2xl relative bg-custom-white "
+          className="border-[1.5px ] sm:w-full lg:w-full border-2  lg:h-[360px] rounded-2xl relative bg-custom-white pb-3"
         >
-          <span className="absolute  top-2 left-2 -ml-2 cursor-pointer px-2 py-1 text-xs font-semibold rounded-md text-white bg-custom-tag">
-  {product.tag}
-</span>
+          {product.tag && (
+  <span
+    className={`absolute top-[6px] -ml-[8px]  -mt-[6px]  left-2 cursor-pointer px-3 py-[4px]  text-[10px] sm:text-xs font-semibold rounded-tl-xl rounded-br-xl ${getTagStyle(
+      product.tag
+    )}`}
+  >
+    {product.tag}
+  </span>
+)}
 
           <img
             src={product.image}
             alt={product.title}
-            className="w-[200px] cursor-pointer  font-bold font-quicksand h-[180px] object-contain  mb-4"
+            className="w-full h-[160px] cursor-pointer object-contain px-2"
           />
-          <p className="text-xs opacity-100 ml-2 text-custom-text-lightgray font-lato  mb-1">
+          <p className="text-[9px] sm:text-xs text-custom-text-lightgray font-lato mb-0.5 px-2">
             {product.category}
           </p>
-          <h3 className="font-bold cursor-pointer ml-2 text-custom-blue font-quicksand text-md mb-1">
+          <h3 className="text-[11px] sm:text-base font-bold cursor-pointer text-custom-blue font-quicksand mb-0.5 px-2 leading-snug">
             {product.title}
           </h3>
-          <p className="text-custom-text-lightgray mb-1">
-            <span className="mr-20  text-yellow-400 ml-2 font-lato">★</span>
-            {product.rating}
+          <p className="text-[10px] sm:text-sm text-custom-text-lightgray mb-0.5 px-2">
+            <span className="text-yellow-400 font-lato">★</span> {product.rating}
           </p>
-
-          <p className="text-xs ml-3 cursor-pointer text-custom-gray  mb-1">
+          <p className="text-[9px] sm:text-xs text-custom-gray mb-1 px-2">
             By <span className="text-custom-green">{product.brand}</span>
           </p>
-          <div className="flex items-center mt-2 space-x-2">
-            <p className="text-lg ml-1 cursor-pointer font-bold font-quicksand px-2 text-custom-green">
-              ${product.price.toFixed(2)}
-            </p>
-            <p className="text-sm line-through cursor-pointer text-custom-gray">
-              ${product.oldPrice.toFixed(2)}
-            </p>
-            <div className=" bg-custom-button-light-green   cursor-pointer flex flex-row   items-center rounded-sm w-[76px] h-[33px] mr-[2px] justify-center">
-              <img src={CartIcon} alt="Add to Cart" className="h-[20px]"/>
-              <span className="text-custom-green cursor-pointer  pl-1">Add</span>
+
+          <div className="flex items-center justify-between mt-1 px-2">
+            <div className="flex items-center space-x-2">
+              <p className="text-xs sm:text-lg font-bold font-quicksand text-custom-green">
+                ${product.price.toFixed(2)}
+              </p>
+              <p className="text-[10px] sm:text-sm line-through text-custom-gray">
+                ${product.oldPrice.toFixed(2)}
+              </p>
+            </div>
+            <div className="bg-custom-button-light-green ml-1 cursor-pointer flex items-center rounded-sm px-2 py-1 sm:px-3 sm:py-1.5">
+              <img
+                src={cartIcon}
+                alt="Add to Cart"
+                className="h-[14px] cursor-pointer -ml-1 sm:h-[18px]"
+              />
+              <span className="text-custom-green cursor-pointer pl-1 text-xs sm:text-base">
+                Add
+              </span>
             </div>
           </div>
         </div>
@@ -166,3 +192,4 @@ const HeroRow3 = () => {
 };
 
 export default HeroRow3;
+ 

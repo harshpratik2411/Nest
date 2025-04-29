@@ -7,7 +7,7 @@ import ShopByCat from './Components/ShopByCat/ShopByCat'
 import TrendingProducts from './Components/TredingProduct/TrendingProducts'
 import Banner from './Components/Banner/BannerBottom'
  import Footer from './Components/Footer/Footer'
-
+ import FeaturedCat from './Components/FeaturedCat/FeaturedCat'
 
 function App() {
   return (
@@ -18,8 +18,9 @@ function App() {
       <HeroMain/> 
      <ShopByCat/>
      <TrendingProducts/>
-       <Banner/> 
+       <Banner/>  
       <Footer/> 
+       <FeaturedCat/>
     </>
   )
 }

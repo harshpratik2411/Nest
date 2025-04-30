@@ -2,7 +2,8 @@ import React from "react";
 import allcategory from "../../assets/icons/allcategory.svg";
 import navDeals from "../../assets/icons/navDeals.svg";
 import headphone from "../../assets/icons/headphone.svg";
-import dropdown from '../../assets/icons/dropdown.svg'
+import dropdown from '../../assets/icons/dropdown.svg' 
+import { Link } from "react-router";
 
 const TopNav1 = () => {
   return (
@@ -22,31 +23,38 @@ const TopNav1 = () => {
 
         {/* Center: Navigation Menu */}
         <nav className="w-full md:w-auto mb-3 md:mb-0">
-          <ul className="flex flex-wrap justify-center md:justify-start text-custom-blue font-quicksand font-bold space-x-4 md:space-x-6 text-sm md:text-base">
-            <li className="hover:text-custom-green cursor-pointer flex items-center gap-x-2">
-              <img className="h-[21px] w-[20px]" src={navDeals} alt="Deals" />
-              <span className="text-[16px]">Deals</span>
-            </li>
-            <li className="hover:text-custom-green text-custom-green text-[16px] flex cursor-pointer items-center">
-              Home<img src={dropdown} className="mt-1 ml-2" size={20} />
-            </li>
-            <li className="hover:text-custom-green cursor-pointer text-[16px]">About</li>
-            <li className="hover:text-custom-green cursor-pointer flex items-center text-[16px]">
-              Shop <img src={dropdown} className="mt-1 ml-2" size={20} />
-            </li>
-            <li className="hover:text-custom-green text-[16px] cursor-pointer flex items-center">
-              Vendors <img src={dropdown} className="mt-1 ml-2" size={20} />
-            </li>
-            <li className="hover:text-custom-green text-[16px] cursor-pointer flex items-center">
-              Mega Menu <img src={dropdown} className="mt-1 ml-2" size={20} />
-            </li>
-            <li className="hover:text-custom-green text-[16px] cursor-pointer">Blog</li>
-            <li className="hover:text-custom-green cursor-pointer flex items-center text-[16px]">
-              Pages <img src={dropdown} className="mt-1 ml-2" size={20} />
-            </li>
-            <li className="hover:text-custom-green text-[16px] cursor-pointer">Contact</li>
-          </ul>
-        </nav>
+  <ul className="flex flex-wrap justify-center md:justify-start text-custom-blue font-quicksand font-bold space-x-4 md:space-x-6 text-sm md:text-base">
+    <li className="hover:text-custom-green cursor-pointer flex items-center gap-x-2">
+      <img className="h-[21px] w-[20px]" src={navDeals} alt="Deals" />
+      <Link to="/deals" className="text-[16px]">Deals</Link>
+    </li>
+    <li className="hover:text-custom-green text-custom-green text-[16px] flex cursor-pointer items-center">
+      <Link to="/" className="flex items-center">Home <img src={dropdown} className="mt-1 ml-2" size={20} /></Link>
+    </li>
+    <li className="hover:text-custom-green cursor-pointer text-[16px]">
+      <Link to="/about">About</Link>
+    </li>
+    <li className="hover:text-custom-green cursor-pointer flex items-center text-[16px]">
+      <Link to="/shop" className="flex items-center">Shop <img src={dropdown} className="mt-1 ml-2" size={20} /></Link>
+    </li>
+    <li className="hover:text-custom-green text-[16px] cursor-pointer flex items-center">
+      <Link to="/vendors" className="flex items-center">Vendors <img src={dropdown} className="mt-1 ml-2" size={20} /></Link>
+    </li>
+    <li className="hover:text-custom-green text-[16px] cursor-pointer flex items-center">
+      <Link to="/mega-menu" className="flex items-center">Mega Menu <img src={dropdown} className="mt-1 ml-2" size={20} /></Link>
+    </li>
+    <li className="hover:text-custom-green text-[16px] cursor-pointer">
+      <Link to="/blog">Blog</Link>
+    </li>
+    <li className="hover:text-custom-green cursor-pointer flex items-center text-[16px]">
+      <Link to="/pages" className="flex items-center">Pages <img src={dropdown} className="mt-1 ml-2" size={20} /></Link>
+    </li>
+    <li className="hover:text-custom-green text-[16px] cursor-pointer">
+      <Link to="/contact">Contact</Link>
+    </li>
+  </ul>
+</nav>
+
 
         {/* Right: Support Info */}
         <div className="flex items-center mt-3 md:mt-0">

@@ -1,5 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router' 
 import React from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 import Homepage from './Pages/Homepage'
 //import Deals from './Pages/Deals'
@@ -11,7 +14,15 @@ import About from './Pages/About/About'
 //import Pages from './Pages/Pages'
 //import Contact from './Pages/Contact'
 
-function App() {
+function App() { 
+
+useEffect(() => {
+  AOS.init({
+    duration: 1000,  // duration of animations
+    once: true,      // whether animations should happen only once
+  });
+}, []); 
+
   return (
     <BrowserRouter>
       <Routes>

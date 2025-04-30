@@ -28,6 +28,7 @@ export default {
         'custom-pink':"#F74B81",
         'custom-light-blue':"#67BCEE",
         'custom-orange':"#F59758",
+        'custom-olivegreen':"#4B675A",
 
       
         

@@ -10,7 +10,7 @@ import About from './Pages/About/About'
 //import Shop from './Pages/Shop'
 //import Vendors from './Pages/Vendors'
 //import MegaMenu from './Pages/MegaMenu'
-//import Blog from './Pages/Blog'
+import Blog from './Pages/Blog/Blog'
 //import Pages from './Pages/Pages'
 import Contact from './Pages/Contact/Contact'
 
@@ -28,12 +28,12 @@ useEffect(() => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         {/* <Route path="/deals" element={<Deals />} /> */}
-         <Route path="/about" element={<About />} />
-      {/* <Route path="/shop" element={<Shop />} />
+          <Route path="/about" element={<About />} />
+         {/* <Route path="/shop" element={<Shop />} />
         <Route path="/vendors" element={<Vendors />} />
         <Route path="/mega-menu" element={<MegaMenu />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/pages" element={<Pages />} /> */}
+        <Route path="/pages" element={<Pages />} />  */}
+         <Route path="/blog" element={<Blog />} /> 
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>

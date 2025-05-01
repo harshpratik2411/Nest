@@ -97,7 +97,7 @@ const Contact = () => {
         </section>
 
         {/* Newsletter Section */}
-         <section className="relative  lg:w-full lg:h-[530px] sm:w-[790px] sm:h-[450px]  ml-2 mt-4 rounded-lg py-16 px-8 flex flex-wrap justify-center items-center">
+         <section className="relative  lg:w-full  lg:h-[430px] sm:w-[790px] sm:h-[450px] mr-3  mt-4 rounded-lg py-16 px-8 flex flex-wrap justify-center items-center">
               <img src={banner4} alt="" className="absolute  inset-0 w-full  h-full object-cover" />
               <div className="relative max-w-4xl text-center text-white">
                 <h1 className="lg:text-5xl sm:text-2xl font-quicksand lg:-ml-[390px] sm:-ml-[20px] font-bold lg:w-[650px] lg:h-[130px] sm:w-[380px] sm:h-[80px] text-custom-blue py-4 mx-auto text-left">

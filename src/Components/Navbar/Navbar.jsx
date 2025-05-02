@@ -55,7 +55,7 @@ const Navbar = () => {
             Close ✖️
           </button>
           <nav className="flex flex-col font-lato space-y-4 opacity-100 text-sm text-custom-new-gray">
-            <a href="/about-us" className="hover:text-gray-400">About Us</a>
+            <a href="/about" className="hover:text-gray-400">About Us</a>
             <a href="/my-account" className="hover:text-gray-400">My Account</a>
             <a href="/wishlist" className="hover:text-gray-400">Wishlist</a>
             <a href="/order-tracking" className="hover:text-gray-400">Order Tracking</a>

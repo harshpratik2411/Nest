@@ -6,10 +6,12 @@ import TopNav2 from '../../Components/TopNav2/TopNav2';
 import Footer from '../../Components/Footer/Footer';
 import location1 from '../../assets/Contact/location.png';
 import banner4 from '../../assets/About/banner4.svg';
+import Navbar from '../../Components/Navbar/Navbar';
 
 const Contact = () => {
   return (
-    <>
+    <> 
+    <Navbar/>
       <TopNav2 />
       <TopNav1 />
 

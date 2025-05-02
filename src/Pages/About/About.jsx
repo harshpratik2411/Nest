@@ -24,6 +24,7 @@ import instagram from "../../assets/About/instagram.svg";
 import twitter from "../../assets/About/twitter.svg";
 import banner4 from "../../assets/About/banner4.svg";
 import Footer from "../../Components/Footer/Footer";
+import Navbar from "../../Components/Navbar/Navbar";
 
 const About = () => {
   const images = [image1, image2, image3];
@@ -48,7 +49,8 @@ const About = () => {
   };
 
   return (
-    <>
+    <> 
+    <Navbar/>
       <TopNav2 />
       <TopNav1 />
       <section className="p-10 flex-wrap">

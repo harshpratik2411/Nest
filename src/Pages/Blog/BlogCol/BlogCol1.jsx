@@ -65,7 +65,7 @@ const BlogCol1 = () => {
 
 
       {/* Gallery */}
-      <div className="bg-custom-white h-[250px]   border-2 p-4 rounded-xl shadow-sm w-full max-w-[280px] mx-auto">
+      <div className="bg-custom-white h-[250px]  lg:block hidden  border-2 p-4 rounded-xl shadow-sm w-full max-w-[280px] mx-auto">
   <h2 className="font-bold font-quicksand text-xl mb-4">Gallery</h2>
   <h3 className="border-t mt-2 h-[3px] w-[70px] cursor-pointer bg-custom-light-green"></h3>
   <h3 className="border-t h-[2px] opacity-100 text-custom-new-gray"></h3>
@@ -84,7 +84,7 @@ const BlogCol1 = () => {
 
       {/* Popular Tags */}
 
-<div className="bg-custom-white p-4 border-2 font-quicksand font-bold h-[250px] rounded-xl shadow-md w-full max-w-[280px] mx-auto">
+<div className="bg-custom-white  lg:block hidden p-4 border-2 font-quicksand font-bold h-[250px] rounded-xl shadow-md w-full max-w-[280px] mx-auto">
   <h2 className="font-bold text-xl mb-4">Popular Tags</h2> 
   <h3 className="border-t mt-2 h-[3px] w-[70px] cursor-pointer bg-custom-light-green"></h3>
   <h3 className="border-t h-[2px] opacity-100 text-custom-new-gray"></h3>

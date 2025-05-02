@@ -5,6 +5,8 @@ import BlogNav from '../BlogNav/BlogNav'
 import Navbar from '../../../Components/Navbar/Navbar' 
 import TopNav1 from '../../../Components/TopNav1/TopNav1'
 import TopNav2 from '../../../Components/TopNav2/TopNav2'
+import BlogBannerBottom from '../BlogBannerbottom/BlogBannerBottom'
+import Footer from '../../../Components/Footer/Footer'
 
 
 const BlogMain = () => {
@@ -17,9 +19,11 @@ const BlogMain = () => {
 
     <div className='flex'> 
 <BlogRowMain/>
-<BlogColMain/>
-        
-    </div>
+<BlogColMain/>  
+ 
+    </div> 
+    <BlogBannerBottom/> 
+    <Footer/>
     </>
   )
 }

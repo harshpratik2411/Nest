@@ -14,6 +14,7 @@ import galleryimg5 from '../../../assets/Blog/galleryimg5.svg';
 import galleryimg6 from '../../../assets/Blog/galleryimg6.svg';
 import cross from '../../../assets/Blog/cross.svg'
 
+ 
 // NOTE: Using native <img> instead of next/image to avoid SVG fill layout issues
 
 const BlogCol1 = () => {
@@ -99,8 +100,7 @@ const BlogCol1 = () => {
     ))}
   </div>
 </div>
-
-
+       
     </div>
   );
 };

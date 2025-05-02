@@ -10,7 +10,7 @@ import About from './Pages/About/About'
 //import Shop from './Pages/Shop'
 //import Vendors from './Pages/Vendors'
 //import MegaMenu from './Pages/MegaMenu'
-import Blog from './Pages/Blog/Blog'
+import Blog from './Pages/Blog/BlogMain/BlogMain'
 //import Pages from './Pages/Pages'
 import Contact from './Pages/Contact/Contact'
 

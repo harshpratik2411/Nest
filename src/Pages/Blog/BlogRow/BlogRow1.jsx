@@ -22,6 +22,7 @@ import image13 from  '../../../assets/Blog/img13.svg'
 import image14 from  '../../../assets/Blog/img14.svg'
 import image15 from  '../../../assets/Blog/img15.svg'
 import recipe from  '../../../assets/Blog/recipe.svg'
+import { useNavigate } from "react-router";
 
 const articles = [
   {
@@ -146,41 +147,42 @@ const articles = [
   },
 ];
 
-const BlogRow1 = () => {
+const BlogRow1 = () => { 
+  const navigate = useNavigate();
   return (
     <>
       <section>
-        {/* Optional header area — currently hidden/commented out */}
-
-        {/* Responsive container (flex for sm, stays default for lg) */}
-        <div  className="flex flex-col  sm:flex-row sm:items-center sm:justify-between gap-4 mb-8"></div>
-
-        {/* Responsive grid for articles */}
-        <div className="px-4 py-8">
-          <div data-aos="fade-up" className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {articles.map((article, index) => (
-              <div key={index} className="space-y-2">
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  className="w-full transition-all transform hover:scale-110 cursor-pointer h-auto rounded-lg"
-                />
-                <p className="text-sm text-custom-text-lightgray font-quicksand">
-                  {article.category}
-                </p>
-                <h3 className="font-quicksand text-custom-blue font-bold leading-snug">
-                  {article.title}
-                </h3>
-                <p className="text-custom-text-lightgray text-sm font-lato">
-                  {article.date} &nbsp;•&nbsp; {article.views} &nbsp;•&nbsp; {article.readTime}
-                </p>
-              </div>
-            ))}
-          </div>
+    
+      <section>
+      <div className="px-4 py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {articles.map((article, index) => (
+            <div key={index} className="space-y-2">
+              <img
+                src={article.image}
+                alt={article.title}
+                onClick={() => navigate(`/blog/${index}`)}
+                className="w-full transition-all transform hover:scale-110 cursor-pointer h-auto rounded-lg"
+              />
+              <p className="text-sm text-custom-text-lightgray font-quicksand">
+                {article.category}
+              </p>
+              <h3 className="font-quicksand text-custom-blue font-bold leading-snug">
+                {article.title}
+              </h3>
+              <p className="text-custom-text-lightgray text-sm font-lato">
+                {article.date} • {article.views} • {article.readTime}
+              </p>
+            </div>
+          ))}
         </div>
+      </div>
+    </section>
       </section>
     </>
   );
-};
+}; 
+
 
 export default BlogRow1;
+export { articles };

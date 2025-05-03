@@ -51,7 +51,7 @@ const BlogCol1 = () => {
         <img
           src={item.image}
           alt={item.title}
-          className="w-[80px] ml-4 h-[80px]"
+          className="w-[80px] transition-all transform hover:scale-125 ml-4 h-[80px]"
         />
         <div className="ml-4 flex cursor-pointer flex-col">
           <h3 className="font-quicksand font-bold text-custom-green">{item.title}</h3>
@@ -71,11 +71,11 @@ const BlogCol1 = () => {
   <h3 className="border-t h-[2px] opacity-100 text-custom-new-gray"></h3>
   <div className="grid grid-cols-3 gap-2">
     {galleryImages.map((imgSrc, idx) => (
-      <div key={idx} className="aspect-square  overflow-hidden rounded-md">
+      <div key={idx} className="aspect-square transition-all transform hover:scale-110  overflow-hidden rounded-md">
         <img
           src={imgSrc}
           alt={`Gallery ${idx}`}
-          className="w-full mt-4  cursor-pointer bg-custom-white-stroke h-full object-cover"
+          className="w-full mt-4   cursor-pointer bg-custom-white-stroke h-full object-cover"
         />
       </div>
     ))}
@@ -92,7 +92,7 @@ const BlogCol1 = () => {
     {['Cabbage', 'Broccoli', 'Smoothie', 'Fruit', 'Salad', 'Appetizer'].map((tag, i) => (
       <button
         key={i}
-        className="flex shadow-md items-center bg-custom-white-stroke text-custom-green px-3 py-2 rounded-full text-xs font-semibold hover:bg-custom-light-green transition"
+        className="flex transition-all transform hover:scale-110 shadow-md items-center bg-custom-white-stroke text-custom-green px-3 py-2 rounded-full text-xs font-semibold hover:bg-custom-light-green "
       >
         <img src={cross} alt="Remove tag" className="w-3 h-3 mr-2" />
         <span>{tag}</span>

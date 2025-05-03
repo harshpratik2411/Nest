@@ -163,7 +163,7 @@ const BlogRow1 = () => {
                 <img
                   src={article.image}
                   alt={article.title}
-                  className="w-full cursor-pointer h-auto rounded-lg"
+                  className="w-full transition-all transform hover:scale-110 cursor-pointer h-auto rounded-lg"
                 />
                 <p className="text-sm text-custom-text-lightgray font-quicksand">
                   {article.category}

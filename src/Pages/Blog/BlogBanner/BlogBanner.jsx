@@ -8,7 +8,7 @@ const tags = ["Shopping", "Recips", "Kitchen", "News", "Food"];
 const BlogBanner = () => {
   return (
     <div data-aos="fade-up"
-      className="rounded-[20px] h-auto lg:h-[200px] bg-[#E7F3EB] p-6 sm:p-4 lg:p-8 relative overflow-hidden"
+      className="rounded-[20px] m-5 h-auto lg:h-[200px] bg-[#E7F3EB] p-6 sm:p-4 lg:p-8 relative overflow-hidden"
       style={{
         backgroundImage: `url(${banner})`,
         backgroundRepeat: "no-repeat",

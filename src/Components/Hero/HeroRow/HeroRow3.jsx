@@ -162,7 +162,7 @@ const HeroRow3 = () => {
             <span className="text-yellow-400 font-lato">★</span> {product.rating}
           </p>
           <p className="text-[9px] sm:text-xs text-custom-gray mb-1 px-2">
-            By <span className="text-custom-green">{product.brand}</span>
+          By <span className="text-custom-green">{product.brand}</span>
           </p>
 
           <div className="flex items-center justify-between mt-1 px-2">

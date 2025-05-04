@@ -13,7 +13,8 @@ import About from './Pages/About/About'
 import Blog from './Pages/Blog/BlogMain/BlogMain' 
 import BlogDetailsMain from './Pages/Blog/BlogDetail/BlogDetailsMain/BlogDetailsMain';
 //import Pages from './Pages/Pages'
-import Contact from './Pages/Contact/Contact'
+import Contact from './Pages/Contact/Contact' 
+import ProductDetail from './Pages/ProductDetails/ProductDetails';
 
 function App() { 
 
@@ -29,7 +30,8 @@ useEffect(() => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         {/* <Route path="/deals" element={<Deals />} /> */}
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About />} /> 
+          <Route path="/product/:id" element={<ProductDetail />} />
          {/* <Route path="/shop" element={<Shop />} />
         <Route path="/vendors" element={<Vendors />} />
         <Route path="/mega-menu" element={<MegaMenu />} />

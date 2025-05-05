@@ -29,7 +29,10 @@ export default {
         'custom-orange': '#F59758',
         'custom-olivegreen': '#4B675A',
         'custom-new-white-stroke': '#F2F2F2',
-        'custom-new-white-bgstoke': '#F4F6FA',
+        'custom-new-white-bgstoke': '#F4F6FA', 
+        'custom-new-pink': '#F74B81', 
+        'custom-yellow': '#FDC040', 
+        
       },
     },
   },

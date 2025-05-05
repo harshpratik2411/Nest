@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router"; // Add this for navigation
+
 import Img1 from "../../../assets/Popular-pro2/Img1.png";
 import Img2 from "../../../assets/Popular-pro2/Img2.png";
 import Img3 from "../../../assets/Popular-pro2/Img3.png";
@@ -114,6 +116,9 @@ const products = [
   },
 ];
 
+// Make sure to export this for detail page use
+export { products };
+
 const getTagStyle = (tag) => {
   switch (tag) {
     case "Hot":
@@ -123,35 +128,35 @@ const getTagStyle = (tag) => {
     case "New":
       return "bg-custom-green text-custom-white";
     default:
-      case "Hot":
-      return "bg-custom-orange text-custom-white";  
-     
+      return "bg-custom-orange text-custom-white";
   }
 };
 
 const HeroRow3 = () => {
+  const navigate = useNavigate(); // Initialize navigate
+
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 mt-4 lg:grid-cols-5 gap-[10px]   p-1 bg-custom-white">
+    <div className="grid grid-cols-2 md:grid-cols-4 mt-4 lg:grid-cols-5 gap-[10px] p-1 bg-custom-white">
       {products.map((product, index) => (
         <div
           key={index}
-          className="border-[1.5px ] sm:w-full lg:w-full border-2  lg:h-[360px] rounded-2xl relative bg-custom-white pb-3"
+          className="border-[1.5px] sm:w-full lg:w-full border-2 lg:h-[360px] rounded-2xl relative bg-custom-white pb-3"
         >
           {product.tag && (
-  <span
-    className={`absolute top-[6px] -ml-[8px]  -mt-[6px]  left-2 cursor-pointer px-3 py-[4px]  text-[10px] sm:text-xs font-semibold rounded-tl-xl rounded-br-xl ${getTagStyle(
-      product.tag
-    )}`}
-  >
-    {product.tag}
-  </span>
-)}
+            <span
+              className={`absolute top-[6px] -ml-[8px] -mt-[6px] left-2 cursor-pointer px-3 py-[4px] text-[10px] sm:text-xs font-semibold rounded-tl-xl rounded-br-xl ${getTagStyle(product.tag)}`}
+            >
+              {product.tag}
+            </span>
+          )}
 
           <img
             src={product.image}
             alt={product.title}
+            onClick={() => navigate(`/product/${index}`)} // Navigate to product detail
             className="w-full h-[160px] cursor-pointer object-contain px-2"
           />
+
           <p className="text-[9px] sm:text-xs text-custom-text-lightgray font-lato mb-0.5 px-2">
             {product.category}
           </p>
@@ -162,7 +167,7 @@ const HeroRow3 = () => {
             <span className="text-yellow-400 font-lato">★</span> {product.rating}
           </p>
           <p className="text-[9px] sm:text-xs text-custom-gray mb-1 px-2">
-          By <span className="text-custom-green">{product.brand}</span>
+            By <span className="text-custom-green">{product.brand}</span>
           </p>
 
           <div className="flex items-center justify-between mt-1 px-2">
@@ -192,4 +197,3 @@ const HeroRow3 = () => {
 };
 
 export default HeroRow3;
- 

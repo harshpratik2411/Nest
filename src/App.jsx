@@ -14,7 +14,8 @@ import Blog from './Pages/Blog/BlogMain/BlogMain'
 import BlogDetailsMain from './Pages/Blog/BlogDetail/BlogDetailsMain/BlogDetailsMain';
 //import Pages from './Pages/Pages'
 import Contact from './Pages/Contact/Contact' 
-import ProductDetail from './Pages/ProductDetails/ProductDetails';
+import ProductDetailsMain from './Pages/ProductDetails/ProductDetailsMain/ProductDetailsMain';
+
 
 function App() { 
 
@@ -31,7 +32,7 @@ useEffect(() => {
         <Route path="/" element={<Homepage />} />
         {/* <Route path="/deals" element={<Deals />} /> */}
           <Route path="/about" element={<About />} /> 
-          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/product/:id" element={<ProductDetailsMain />} />
          {/* <Route path="/shop" element={<Shop />} />
         <Route path="/vendors" element={<Vendors />} />
         <Route path="/mega-menu" element={<MegaMenu />} />

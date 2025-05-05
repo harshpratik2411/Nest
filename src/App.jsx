@@ -14,7 +14,9 @@ import Blog from './Pages/Blog/BlogMain/BlogMain'
 import BlogDetailsMain from './Pages/Blog/BlogDetail/BlogDetailsMain/BlogDetailsMain';
 //import Pages from './Pages/Pages'
 import Contact from './Pages/Contact/Contact' 
-import ProductDetailsMain from './Pages/ProductDetails/ProductDetailsMain/ProductDetailsMain';
+import ProductDetailsMain from './Pages/ProductDetails/ProductDetailsMain/ProductDetailsMain';  
+import ProductDetailsRow1 from './Pages/ProductDetails/ProductDetailsRow/ProductDetailsRow1';
+
 
 
 function App() { 
@@ -33,6 +35,8 @@ useEffect(() => {
         {/* <Route path="/deals" element={<Deals />} /> */}
           <Route path="/about" element={<About />} /> 
           <Route path="/product/:id" element={<ProductDetailsMain />} />
+          <Route path="/product/:id" element={<ProductDetailsRow1 />} /> {/* Dynamic route */}
+
          {/* <Route path="/shop" element={<Shop />} />
         <Route path="/vendors" element={<Vendors />} />
         <Route path="/mega-menu" element={<MegaMenu />} />

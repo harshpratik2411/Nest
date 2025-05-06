@@ -1,27 +1,38 @@
 import React from 'react';
-import Banner from '../../assets/Contact/banner.png';
+//import Banner from '../../assets/Contact/banner.png';
 import Img from '../../assets/Contact/Img1.svg';
 import TopNav1 from '../../Components/TopNav1/TopNav1';
 import TopNav2 from '../../Components/TopNav2/TopNav2';
 import Footer from '../../Components/Footer/Footer';
 import location1 from '../../assets/Contact/location.png';
 import banner4 from '../../assets/About/banner4.svg';
-import Navbar from '../../Components/Navbar/Navbar';
+import Navbar from '../../Components/Navbar/Navbar'; 
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
+
+const containerStyle = {
+  width: '100%',
+  height: '400px'
+};
+
+const center = {
+  lat: 25.317644,
+  lng: 82.973915
+};
 
 const Contact = () => {
   return (
     <> 
-    <Navbar/>
+      <Navbar/>
       <TopNav2 />
-      <TopNav1 />
+      <TopNav1 /> 
 
-      <div className="font-quicksand text-custom-text-gray">
+
         {/* Section Header */}
         <section className="px-6 lg:px-24 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left side: Text content */}
             <div>
-              <p data-aos="fade-up" className="text-custom-green text-sm ml-1 font-quicksand font-bold">How can help you ?</p>
+              <p data-aos="fade-up" className="text-custom-green text-lg ml-1 font-quicksand font-bold">How can help you ?</p>
               <h2 data-aos="fade-up" className="text-3xl lg:text-4xl font-lato font-bold text-custom-blue mt-2 mb-4">
                 Let us know how <br /> we can help you
               </h2>
@@ -50,9 +61,21 @@ const Contact = () => {
           </div>
         </section>
 
+      <div className="font-quicksand text-custom-text-gray">
+  <LoadScript googleMapsApiKey="AIzaSyC3kkgdF0DlLqik5mVGGPGnAXsP7IS7WQE">
+    <div className="m-8 h-[320px] rounded-lg"> {/* Apply margin here */}
+      <GoogleMap 
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={14}
+      >
+        {/* Add markers or other components here if needed */}
+      </GoogleMap>
+    </div>
+  </LoadScript>
         {/* Map Image */}
         <div data-aos="fade-up" className="px-6 lg:px-24">
-          <img src={Banner} alt="Map Banner" className="w-full object-cover rounded-lg" />
+          {/* <img src={Banner} alt="Map Banner" className="w-full object-cover rounded-lg" /> */}
         </div>
 
         {/* Location Cards */}
@@ -99,28 +122,26 @@ const Contact = () => {
         </section>
 
         {/* Newsletter Section */}
-         <section className="relative  lg:w-full  lg:h-[430px] sm:w-[790px] sm:h-[450px] mr-3  mt-4 rounded-lg py-16 px-8 flex flex-wrap justify-center items-center">
-              <img src={banner4} alt="" className="absolute  inset-0 w-full  h-full object-cover" />
-              <div className="relative max-w-4xl text-center text-white">
-                <h1 className="lg:text-5xl sm:text-2xl font-quicksand lg:-ml-[390px] sm:-ml-[20px] font-bold lg:w-[650px] lg:h-[130px] sm:w-[380px] sm:h-[80px] text-custom-blue py-4 mx-auto text-left">
-                  Don’t miss amazing <br /> grocery deals
-                </h1>
-                <p className="lg:text-xl sm:text-base font-lato text-custom-new-gray lg:-ml-[760px] -ml-[103px] cursor-pointer  mb-6">Sign up for the daily newsletter</p>
-                <div className="flex justify-center items-center lg:-ml-[390px] -ml-2 mr-3  mt-2 bg-custom-white rounded-full shadow-md lg:max-w-md sm:max-w-sm mx-auto overflow-hidden">
-                      <input
-                        type="email"
-                        placeholder="Your email address"
-                        className="flex-1 px-4  py-3 outline-none  text-custom-blue"
-                        /> 
-                        <button className="bg-custom-green   lg:w-auto lg:ml-2  cursor-pointer text-custom-white px-6 py-3 rounded-full font-medium">
-                        Subscribe
-                      </button> 
-                     </div>
-              </div>
-            </section> 
-        
+        <section className="relative  lg:w-full  lg:h-[430px] sm:w-[790px] sm:h-[450px] mr-3  mt-4 rounded-lg py-16 px-8 flex flex-wrap justify-center items-center">
+          <img src={banner4} alt="" className="absolute  inset-0 w-full  h-full object-cover" />
+          <div className="relative max-w-4xl text-center text-white">
+            <h1 className="lg:text-5xl sm:text-2xl font-quicksand lg:-ml-[390px] sm:-ml-[20px] font-bold lg:w-[650px] lg:h-[130px] sm:w-[380px] sm:h-[80px] text-custom-blue py-4 mx-auto text-left">
+              Don’t miss amazing <br /> grocery deals
+            </h1>
+            <p className="lg:text-xl sm:text-base font-lato text-custom-new-gray lg:-ml-[760px] -ml-[103px] cursor-pointer  mb-6">Sign up for the daily newsletter</p>
+            <div className="flex justify-center items-center lg:-ml-[390px] -ml-2 mr-3  mt-2 bg-custom-white rounded-full shadow-md lg:max-w-md sm:max-w-sm mx-auto overflow-hidden">
+              <input
+                type="email"
+                placeholder="Your email address"
+                className="flex-1 px-4  py-3 outline-none  text-custom-blue"
+              /> 
+              <button className="bg-custom-green   lg:w-auto lg:ml-2  cursor-pointer text-custom-white px-6 py-3 rounded-full font-medium">
+                Subscribe
+              </button> 
+            </div>
+          </div>
+        </section> 
       </div>
-
       <Footer />
     </>
   );

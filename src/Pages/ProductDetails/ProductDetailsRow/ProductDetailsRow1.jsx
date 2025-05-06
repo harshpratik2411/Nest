@@ -104,7 +104,7 @@ const ProductDetailsRow1 = () => {
     </div>
  
 
-
+// ★
         {/* Right: Info */}
         <div className="md:w-1/2 w-full">
   <div className="bg-custom-pink/20 cursor-pointer text-custom-pink px-3 py-1 rounded text-xs inline-block mb-3">

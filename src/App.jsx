@@ -16,6 +16,8 @@ import BlogDetailsMain from './Pages/Blog/BlogDetail/BlogDetailsMain/BlogDetails
 import Contact from './Pages/Contact/Contact' 
 import ProductDetailsMain from './Pages/ProductDetails/ProductDetailsMain/ProductDetailsMain';  
 import ProductDetailsRow1 from './Pages/ProductDetails/ProductDetailsRow/ProductDetailsRow1';
+import Cart from './Pages/Cart/Cart';
+import { CartProvider } from './Context/CartContext';
 
 
 
@@ -28,14 +30,16 @@ useEffect(() => {
   });
 }, []); 
 
-  return (
+  return (  
+    <CartProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage />} />
         {/* <Route path="/deals" element={<Deals />} /> */}
           <Route path="/about" element={<About />} /> 
           <Route path="/product/:id" element={<ProductDetailsMain />} />
-          <Route path="/product/:id" element={<ProductDetailsRow1 />} /> {/* Dynamic route */}
+          <Route path="/product/:id" element={<ProductDetailsRow1 />} /> {/* Dynamic route */} 
+          <Route path="/cart" element={<Cart/>} /> 
 
          {/* <Route path="/shop" element={<Shop />} />
         <Route path="/vendors" element={<Vendors />} />
@@ -46,6 +50,7 @@ useEffect(() => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
+        </CartProvider>
   )
 }
   export default App

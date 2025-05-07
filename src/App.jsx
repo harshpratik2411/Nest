@@ -28,6 +28,10 @@ useEffect(() => {
     duration: 1000,  // duration of animations
     once: true,      // whether animations should happen only once
   });
+
+
+
+  
 }, []); 
 
   return (  

@@ -156,7 +156,31 @@ const Cart = () => {
                   <span>${(total - 2.5).toFixed(2)}</span>
                 </div>
               </div>
-              <button className="w-full mt-6 py-3 bg-custom-green hover:bg-green-600 text-white text-lg font-semibold rounded-xl transition duration-300">
+              <button className="w-full mt-6 py-3 bg-custom-green hover:bg-green-600 text-white text-lg font-semibold rounded-xl transition duration-300" onClick={() =>{
+                console.log("Payment button clicked");
+                 const options = {
+                  key: 'rzp_test_KBu0EDUwXZpGZo', 
+                  amount: 100 * 100, 
+                  currency: 'INR',
+                  name: 'Your Company',
+                  description: 'Test Transaction',
+                  handler: function (response) {
+                    alert('Payment Successful');
+                    console.log(response);
+                  },
+                  prefill: {
+                    name: 'John Doe',
+                    email: 'john.doe@example.com',
+                    contact: '9999999999',
+                  },
+                  theme: {
+                    color: '#F37254',
+                  },
+                };
+            
+                const rzp1 = new window.Razorpay(options);
+                rzp1.open();
+              }}>
                 Place Order
               </button>
               <p className="mt-4 text-xs sm:text-sm text-custom-green font-quicksand font-semibold text-center">

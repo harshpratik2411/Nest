@@ -69,7 +69,6 @@ const Contact = () => {
         center={center}
         zoom={14}
       >
-        {/* Add markers or other components here if needed */}
       </GoogleMap>
     </div>
   </LoadScript>

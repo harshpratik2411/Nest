@@ -7,9 +7,9 @@ import { useEffect } from 'react';
 import Homepage from './Pages/Homepage'
 import Deals from './Pages/Deals/Deals'
 import About from './Pages/About/About'
-//import Shop from './Pages/Shop'
+import Shop from './Pages/Shop/Shop'
 //import Vendors from './Pages/Vendors'
-//import MegaMenu from './Pages/MegaMenu'
+//import MegaMenu from './Pages/MegaMenu/MegaMenu'
 import Blog from './Pages/Blog/BlogMain/BlogMain' 
 import BlogDetailsMain from './Pages/Blog/BlogDetail/BlogDetailsMain/BlogDetailsMain';
 //import Pages from './Pages/Pages'
@@ -45,10 +45,10 @@ useEffect(() => {
           <Route path="/product/:id" element={<ProductDetailsRow1 />} /> {/* Dynamic route */} 
           <Route path="/cart" element={<Cart/>} /> 
 
-         {/* <Route path="/shop" element={<Shop />} />
-        <Route path="/vendors" element={<Vendors />} />
-        <Route path="/mega-menu" element={<MegaMenu />} />
-        <Route path="/pages" element={<Pages />} />  */}
+           <Route path="/shop" element={<Shop />} />
+        {/* <Route path="/vendors" element={<Vendors />} /> */}
+        {/* <Route path="/mega-menu" element={<MegaMenu />} /> */}
+        {/* <Route path="/pages" element={<Pages />} />  */}
          <Route path="/blog" element={<Blog />} />  
          <Route path="/blog/:id" element={<BlogDetailsMain />} />
         <Route path="/contact" element={<Contact />} />

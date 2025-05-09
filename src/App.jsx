@@ -5,7 +5,7 @@ import 'aos/dist/aos.css'
 import { useEffect } from 'react';
 
 import Homepage from './Pages/Homepage'
-//import Deals from './Pages/Deals'
+import Deals from './Pages/Deals/Deals'
 import About from './Pages/About/About'
 //import Shop from './Pages/Shop'
 //import Vendors from './Pages/Vendors'
@@ -39,7 +39,7 @@ useEffect(() => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        {/* <Route path="/deals" element={<Deals />} /> */}
+         <Route path="/deals" element={<Deals />} /> 
           <Route path="/about" element={<About />} /> 
           <Route path="/product/:id" element={<ProductDetailsMain />} />
           <Route path="/product/:id" element={<ProductDetailsRow1 />} /> {/* Dynamic route */} 

@@ -19,6 +19,7 @@ import ProductDetailsRow1 from './Pages/ProductDetails/ProductDetailsRow/Product
 import Cart from './Pages/Cart/Cart';
 import { CartProvider } from './Context/CartContext'; 
 import Compare from './Pages/Compare/Compare';
+import Account from './Pages/Account/Account';
 
 
 
@@ -54,6 +55,7 @@ useEffect(() => {
          <Route path="/blog/:id" element={<BlogDetailsMain />} />
         <Route path="/contact" element={<Contact />} /> 
         <Route path="/compare" element={<Compare />} /> 
+        <Route path="/account" element={<Account/>} /> 
       </Routes>
     </BrowserRouter>
         </CartProvider>

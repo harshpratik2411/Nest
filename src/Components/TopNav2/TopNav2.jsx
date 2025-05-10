@@ -7,7 +7,7 @@ import account from '../../assets/icons/account.svg';
 import wishlist from '../../assets/icons/wishlist.svg';
 import { FiSearch } from 'react-icons/fi';
 import { IoMdArrowDropdown } from "react-icons/io";
-
+import { Link } from 'react-router';
 const TopNav2 = () => {
   const categories = ['All categories'];
   const [searchTerm, setSearchTerm] = useState("");
@@ -50,29 +50,35 @@ const TopNav2 = () => {
 
       {/* Icons Section */}
       <div className="flex items-center ml-[60px] mt-3 space-x-8">
-        {/* Compare - Hidden on small */}
-        <a href="#" className="hidden lg:flex items-center space-x-1 text-custom-new-gray">
+        {/* Compare - Hidden on small */} 
+         <Link
+         to="compare" className="hidden lg:flex items-center space-x-1 text-custom-new-gray">
           <img src={compare} alt="Compare" />
-          <span className='mt-2 text-sm'>Compare</span>
-        </a>
+          <span className='mt-2 text-sm'>Compare</span> 
+        
+         </Link>
 
-        {/* Wishlist - Always visible */}
-        <a href="#" className="lg:flex hidden items-center space-x-1 text-custom-new-gray">
+        {/* Wishlist - Always visible */} 
+        <Link 
+        href="#" className="lg:flex hidden items-center space-x-1 text-custom-new-gray">
           <img src={wishlist} alt="Wishlist" />
           <span className='mt-2 text-sm'>Wishlist</span>
-        </a>
-
-        {/* Cart - Always visible */}
-        <a href="#" className="lg:flex hidden items-center space-x-1 text-custom-new-gray">
+       
+        </Link>
+        <Link
+       
+        className="lg:flex hidden items-center space-x-1 text-custom-new-gray">
           <img src={cart} alt="Cart" />
           <span className='mt-2 text-sm'>Cart</span>
-        </a>
-
-        {/* Account - Hidden on small */}
-        <a href="#" className="hidden lg:flex items-center space-x-1 text-custom-new-gray">
+       
+        </Link>
+         <Link
+        className="hidden lg:flex items-center space-x-1 text-custom-new-gray">
           <img src={account} alt="Account" />
           <span className='mt-2 text-sm'>Account</span>
-        </a>
+       
+         </Link>
+        {/* Account - Hidden on small */}
       </div>
     </div>
   );

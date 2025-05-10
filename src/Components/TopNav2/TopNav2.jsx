@@ -60,19 +60,20 @@ const TopNav2 = () => {
 
         {/* Wishlist - Always visible */} 
         <Link 
-        href="#" className="lg:flex hidden items-center space-x-1 text-custom-new-gray">
+        to="wishlist" className="lg:flex hidden items-center space-x-1 text-custom-new-gray">
           <img src={wishlist} alt="Wishlist" />
           <span className='mt-2 text-sm'>Wishlist</span>
        
         </Link>
         <Link
-       
+          to="cart"
         className="lg:flex hidden items-center space-x-1 text-custom-new-gray">
           <img src={cart} alt="Cart" />
           <span className='mt-2 text-sm'>Cart</span>
        
         </Link>
-         <Link
+         <Link 
+         to="account"
         className="hidden lg:flex items-center space-x-1 text-custom-new-gray">
           <img src={account} alt="Account" />
           <span className='mt-2 text-sm'>Account</span>

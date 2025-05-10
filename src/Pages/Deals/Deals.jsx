@@ -70,8 +70,8 @@ const Deals = () => {
   return (
     <>
       <Navbar />
-      <TopNav1 />
       <TopNav2 />
+      <TopNav1 />
       <div className="font-quicksand bg-custom-white relative">
         <div className="fixed bottom-6 right-6 bg-custom-pink text-white px-4 py-2 rounded-full shadow-lg z-50 animate-bounce text-sm sm:text-xs">
           💡 20% OFF Today Only!

@@ -24,7 +24,8 @@ const getGridProductUI = (product,index) => {
   
   return (
     <div
-              key={index}
+              key={index} 
+              onClick={() => navigate(`/product/${index}`)}
               className="border-[1.5px] sm:w-full lg:w-full  lg:h-[360px] rounded-2xl relative bg-custom-white pb-3"
             >
               {product.tag && (
@@ -38,7 +39,7 @@ const getGridProductUI = (product,index) => {
               <img
                 src={product.image}
                 alt={product.title}
-                onClick={() => navigate(`/product/${index}`)}
+                // onClick={() => navigate(`/product/${index}`)}
                 className="w-full h-[160px] cursor-pointer object-contain px-2"
               />
     

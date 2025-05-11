@@ -122,7 +122,7 @@ export { products };
 
 const HeroRow3 = () => {
  
-  return (
+  return (  
     <div className="grid grid-cols-2 md:grid-cols-4 mt-4 lg:grid-cols-5 gap-[10px] p-1 bg-custom-white">
       {products.map((product, index) => (
         getGridProductUI(product,index)

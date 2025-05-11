@@ -56,7 +56,7 @@ const Navbar = () => {
           </button>
           <nav className="flex flex-col font-lato space-y-4 opacity-100 text-sm text-custom-new-gray">
             <a href="/about" className="hover:text-gray-400">About Us</a>
-            <a href="/my-account" className="hover:text-gray-400">My Account</a>
+            <a href="/account" className="hover:text-gray-400">My Account</a>
             <a href="/wishlist" className="hover:text-gray-400">Wishlist</a>
             <a href="/order-tracking" className="hover:text-gray-400">Order Tracking</a>
             <hr />
@@ -93,11 +93,11 @@ const Navbar = () => {
       >
         {/* Left Section */}
         <div className="flex space-x-3 mx-[120px] my-[6.5px] text-[13px]">
-          <a href="/about-us" className="hover:text-gray-400">
+          <a href="/about" className="hover:text-gray-400">
             About Us
           </a>
           <span className="text-custom-line ">|</span>
-          <a href="/my-account" className="hover:text-gray-400">
+          <a href="/account" className="hover:text-gray-400">
             My Account
           </a>
           <span className="text-custom-line">|</span>

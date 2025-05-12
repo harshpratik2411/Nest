@@ -26,7 +26,7 @@ const getGridProductUI = (product,index) => {
     <div
               key={index} 
               onClick={() => navigate(`/product/${index}`)}
-              className="border-[1.5px] sm:w-full lg:w-full  lg:h-[360px] rounded-2xl relative bg-custom-white pb-3"
+              className="border-[1.5px] sm:w-full lg:w-full  cursor-pointer lg:h-[360px] rounded-2xl relative bg-custom-white pb-3"
             >
               {product.tag && (
                 <span

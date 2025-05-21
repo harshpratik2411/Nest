@@ -26,11 +26,11 @@ const getGridProductUI = (product,index) => {
     <div
               key={index} 
               onClick={() => navigate(`/product/${index}`)}
-              className="border-[1.5px] sm:w-full lg:w-full  cursor-pointer lg:h-[360px] rounded-2xl relative bg-custom-white pb-3"
+              className="border-[1.5px] sm:w-full lg:w-full  cursor-pointer lg:h-[360px] rounded-2xl hover:scale-105 relative bg-custom-white pb-3"
             >
               {product.tag && (
                 <span
-                  className={`absolute top-[6px] -ml-[8px] -mt-[6px] left-2 cursor-pointer px-3 py-[4px] text-[10px] sm:text-xs font-semibold rounded-tl-xl rounded-br-xl ${getTagStyle(product.tag)}`}
+                  className={`absolute top-[6px]  -ml-[8px] -mt-[6px] left-2 cursor-pointer px-3 py-[4px] text-[10px] sm:text-xs font-semibold rounded-tl-xl rounded-br-xl ${getTagStyle(product.tag)}`}
                 >
                   {product.tag}
                 </span>
@@ -40,7 +40,7 @@ const getGridProductUI = (product,index) => {
                 src={product.image}
                 alt={product.title}
                 // onClick={() => navigate(`/product/${index}`)}
-                className="w-full h-[160px] cursor-pointer object-contain px-2"
+                className="w-full h-[160px]   cursor-pointer object-contain px-2"
               />
     
     <h3 className="text-[11px] sm:text-base font-bold cursor-pointer text-custom-blue font-quicksand mb-0.5 px-2 leading-snug">

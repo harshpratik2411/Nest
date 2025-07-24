@@ -23,7 +23,7 @@ const getGridProductUI = (product,index) => {
     const { addToCart } = useContext(CartContext); // 👈 get addToCart
   
   return (
-    <div
+    <div 
               key={index} 
               onClick={() => navigate(`/product/${index}`)}
               className="border-[1.5px] sm:w-full lg:w-full  cursor-pointer lg:h-[360px] rounded-2xl hover:scale-105 relative bg-custom-white pb-3"
@@ -88,4 +88,4 @@ const getGridProductUI = (product,index) => {
   )
 }
 
-export default getGridProductUI
+export default getGridProductUI 
